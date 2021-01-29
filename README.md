@@ -25,6 +25,14 @@ git clone --recurse-submodules --depth 1 https://github.com/<username>/<reposito
 hugo server
 ```
 
+#### Run the website locally with `blogdown`
+
+* Open R
+
+```r
+blogdown::serve_site()
+```
+
 # Documentation
 
 This Docsy Template Project uses the [Docsy](https://github.com/google/docsy) theme, as well as providing a skeleton documentation structure for you to use. The full documentation can be found [here](https://www.docsy.dev/docs/deployment/).
@@ -42,8 +50,31 @@ ToDo
 
 ## Deploy to GitHub Pages
 
-### 
+### Create a new branch named `gh-pages`
 
+```
+git checkout -b gh-pages
+rm -rv !(.git|README.md)
+git add . && git commit -m "gh-pages" && git push
+git checkout main
+git add . && git commit -m "pg_build" && git push
+```
+* To trigger a build and deployment event, in the `git commit` message, include the word "**pg_build**", e.g. `git commit -m "pg_build"`. This will run the full rendering process (rendering and deploy the website may still take a few minutes).
+
+### Setting 
+
+* Click on **Setting**
+* click on **GitHub Pages** 
+* Select Branch *gh-pages* and folder */(root)* and click on **Save**
+* Click on **Enforce HTTPS** 
+
+### Details
+
+* The first deployment can take some time
+* If you have build the site locally and updated the `/public` locally, in the `commit` message, 
+include the word "**no_render**". This will skip the site rendering process and
+jump to page deployment directly which takes less than 30s to update website.
+ 
 ## Deploy to Netlify
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/dcassol/docsy_original)
