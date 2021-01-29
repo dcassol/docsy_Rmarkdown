@@ -3,6 +3,7 @@ title: "Example Rmarkdown"
 author: "lz"
 date: "1/28/2021"
 output: html_document
+weight: 1
 ---
 
 ```{r setup, include=FALSE}

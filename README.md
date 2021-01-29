@@ -40,6 +40,10 @@ ToDo
 
 # Deploy
 
+## Deploy to GitHub Pages
+
+### 
+
 ## Deploy to Netlify
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/dcassol/docsy_original)
@@ -69,6 +73,8 @@ Click on the button above and follow these instructions:
 <summary><b>
 Deploy to Netlify button
 </b></summary
+
+> **_NOTE:_** At the moment, the button application is not cloning the content of the repository.
 
 Click on the button above and follow these instructions:
 

@@ -206,22 +206,21 @@ enable = true
         desc = "Discuss development issues around the project"
 
 
-
 # Top-level navigation (horizontal)
-## SPR
-[[menu.main]]
-  name = "Example Dropdown"
-  weight = 1
-  url = "/"
-  [[menu.main]]
-    name = "Example Rmd"
-    url = "/docs/test/"
-    parent = "Example Dropdown"
-    weight = 1
+## 
 [[menu.main]]
   name = "Documentation"
-  weight = 2
+  weight = 1
   url = "/docs/"
+[[menu.main]]
+  name = "Example Dropdown"
+  weight = 2
+  url = "/"
+[[menu.main]]
+  name = "Example Rmd"
+  url = "/docs/test/"
+  parent = "Example Dropdown"
+  weight = 1
 [[menu.main]]
   name = "About"
   weight = 3
