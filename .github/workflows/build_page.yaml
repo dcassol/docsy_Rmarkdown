@@ -37,7 +37,7 @@ jobs:
           git add -A
           git commit -m "Bot update public and md5sum table" -a
       - name: Push changes
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}

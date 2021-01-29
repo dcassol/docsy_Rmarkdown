@@ -172,7 +172,7 @@ rm -rv !(.git|README.md)
 git add . && git commit -m "gh-pages" && git push --set-upstream origin gh-pages
 git checkout main
 git add . && git commit -m "pg_build" && git push
-git submodule update --init
+git submodule update --init --recursive
 ```
 Or go to Github website create a branch by [clicking](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository).
 
