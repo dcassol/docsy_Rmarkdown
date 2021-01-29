@@ -48,7 +48,7 @@ ToDo
 
 <details>
 <summary><b>
-Deploy to Netlify with Git
+Deploy to Netlify with GitHub
 </b></summary
 
 Click on the button above and follow these instructions:
