@@ -6,7 +6,7 @@
 * Choose a Repository Name
 * Click on the **Create repository from template** button.
 
-<img src="https://raw.githubusercontent.com/dcassol/images/main/usetemplte.gif" width="400" height="400" />
+![](https://raw.githubusercontent.com/dcassol/images/main/usetemplte.gif)
 
 ### Usage locally
 
