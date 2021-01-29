@@ -2,8 +2,8 @@
 # eg: "https://USERNAME.github.io/" if this is your first website
 # or "https://USERNAME.github.io/REPO_NAME/" if not the first
 # replace USERNAME and REPO_NAME
-baseURL = "/"
-title = "systemPipeR"
+baseURL = "http://www.dcassol.com/"
+title = "Docsy Rmarkdown"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit", "\\.utf8"]
 enableRobotsTXT = true
 relativeURLs = true
