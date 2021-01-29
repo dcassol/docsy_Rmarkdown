@@ -84,6 +84,10 @@ sudo npm install -D postcss-cli
 # Starting in version 8 of postcss-cli, you must also separately install postcss:
 
 sudo npm install -D postcss
+
+# go to your website directory
+cd <repository_name>
+npm audit fix
 ```
 
 ### Run the website locally 
