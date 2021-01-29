@@ -48,7 +48,7 @@ data <- data.frame(
 )
 
 # Most basic violin chart
-ggplot(data, aes(x=name, y=value, fill=name)) + # fill=name allow to automatically dedicate a color for each group
+p <- ggplot(data, aes(x=name, y=value, fill=name)) + # fill=name allow to automatically dedicate a color for each group
   geom_violin()
 ```
 
@@ -56,20 +56,6 @@ ggplot(data, aes(x=name, y=value, fill=name)) + # fill=name allow to automatical
 
 ```{r}
 library(plotly)
-
-df <- read.csv("https://raw.githubusercontent.com/plotly/datasets/master/violin_data.csv")
-
-fig <- df %>%
-  plot_ly(
-    x = ~day, y = ~total_bill, split = ~day, type = "violin",
-    box = list(visible = T),
-    meanline = list(visible = T))
-
-fig <- fig %>%
-  layout(xaxis = list(title = "Day"),
-    yaxis = list(title = "Total Bill", zeroline = F)
-  )
-
-fig
+ggplotly(p)
 ```
 

@@ -33,9 +33,39 @@ hugo server
 blogdown::serve_site()
 ```
 
+## Prerequisites and Installation
+
+### Install [Hugo](https://github.com/gohugoio/hugo/releases)
+
+You need a recent extended version (we recommend version 0.79.0 or later) of Hugo 
+to do local builds and previews of sites that use Docsy.
+
+```
+wget https://github.com/gohugoio/hugo/releases/download/v0.79.0/hugo_extended_0.79.0_Linux-64bit.deb
+sudo dpkg -i  hugo_extended_0.79.0_Linux-64bit.deb 
+hugo version
+```
+
+For `Windows` and `macOS` please see instructions [here](https://www.docsy.dev/docs/getting-started/). 
+
+### Install PostCSS
+
+To build or update your site’s CSS resources, you also need PostCSS to create the final assets. If you need to install it, you must have a recent version of NodeJS installed on your machine so you can use npm, the Node package manager. By default npm installs tools under the directory where you run npm install:
+
+sudo npm install -D autoprefixer
+sudo npm install -D postcss-cli
+Starting in version 8 of postcss-cli, you must also separately install postcss:
+
+sudo npm install -D postcss
+
 # Documentation
 
 This Docsy Template Project uses the [Docsy](https://github.com/google/docsy) theme, as well as providing a skeleton documentation structure for you to use. The full documentation can be found [here](https://www.docsy.dev/docs/deployment/).
+
+## Create new content
+
+> **_Important:_** All the RMarkdown files should have `.Rmarkdown` extension, e.g. `tutorial.Rmakdown`
+
 
 <details>
 <summary><b>
