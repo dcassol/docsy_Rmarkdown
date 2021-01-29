@@ -39,7 +39,6 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 ```{r}
 # Library
 library(ggplot2)
-
 # create a dataset
 data <- data.frame(
   name=c( rep("A",500), rep("B",500), rep("B",500), rep("C",20), rep('D', 100)  ),
@@ -53,7 +52,7 @@ p <- ggplot(data, aes(x=name, y=value, fill=name)) + # fill=name allow to automa
 
 ## Violin Plot with 
 
-```{r}
+```{r, message=FALSE}
 library(plotly)
 ggplotly(p)
 ```
