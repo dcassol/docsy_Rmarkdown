@@ -14,6 +14,14 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: "recursive"
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: install node pkgs
+        run: |
+          npm install -g postcss-cli
+          npm install autoprefixer
+          npm audit fix
       - uses: r-lib/actions/setup-r@v1
       - uses: r-lib/actions/setup-pandoc@v1
       - name: Cache R packages
