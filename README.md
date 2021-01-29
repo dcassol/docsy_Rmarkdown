@@ -148,31 +148,35 @@ ToDo
 ## Deploy
 
 ### Deploy to GitHub Pages
+
 Key feature: Fully automatic, **no need to build website locally**. Yes, you can skip `blogdown::build_site()` step locally.
 
-#### 1. Add all R and system packages to `/deps.yaml` file that are required to render your Rmarkdowns
-- specify any CRAN, Bioconductor or Github packages you have used, in yaml array format. Github packages need to be user_name/repo_name.
-- The site building is happening on Github by an Ubuntu system, so specify any system packages to install that are required by your R packages. Only a single line, use space to separate each system dependencies.
+#### 1. Add all R and system packages to `/deps.yaml` file that are required to render your `Rmarkdown` files
+
+* Specify any CRAN, Bioconductor or Github packages you have used, in `yaml` array format. Github packages need to be `user_name/repo_name`.
+* The site building is happening on Github by an Ubuntu system, so specify any system packages to install that are required by your R packages. Only a single line, use space to separate each system dependencies.
 
 #### 2. change base URL in config
-Change your baseURL in the `/config.toml`. 
 
-- If this is your first github website, change the baseURL = "/" to your github base url, like "https://USERNAME.github.io/".
-- If not, baseURL = "/" to your repo's url, like "https://USERNAME.github.io/REPO_NAME/".
-- If you use custom domain, baseURL = "/" to your custom url, like "https://MY_DOMAIN_NAME.com/".
+Change your `baseURL` in the `/config.toml`. 
+
+* If this is your first github website, change the baseURL = "/" to your github base `url`, like "`https://USERNAME.github.io/`".
+* If not, baseURL = "/" to your repo's url, like "`https://USERNAME.github.io/REPO_NAME/`".
+* If you use custom domain, baseURL = "/" to your custom url, like "`https://MY_DOMAIN_NAME.com/`".
 
 #### 2. Create a new branch named `gh-pages`
 
-```bash
+```
 git checkout -b gh-pages
 rm -rv !(.git|README.md)
-git add . && git commit -m "gh-pages" && git push
+git add . && git commit -m "gh-pages" && git push --set-upstream origin gh-pages
 git checkout main
 git add . && git commit -m "pg_build" && git push
+git submodule update --init
 ```
 Or go to Github website create a branch by [clicking](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository).
 
-You do not need to push any content to this `gh-pages` branch. This branch is automatically managed by Github Actions. 
+You do *not* need to push any content to this `gh-pages` branch. This branch is automatically managed by Github Actions. 
 
 #### 3. Github Setting 
 
@@ -182,15 +186,16 @@ You do not need to push any content to this `gh-pages` branch. This branch is au
 * Click on **Enforce HTTPS** 
 
 #### 4. Trigger page build
-- To trigger a build and deployment event, in the `git commit` message, include the word "**pg_build**", 
+
+* To trigger a build and deployment event, in the `git commit` message, include the word "**pg_build**", 
 e.g. `git commit -m "blabla pg_build"`. This will run the full rendering process (rendering and deploy the website may still take a few minutes).
-- If you have build the site locally and updated the `/public` locally, in your commit message, include the word "no_render" will skip the site rendering + build process. Github Actions will directly use `/public` to host the website.
+* If you have build the site locally and updated the `/public` locally, in your commit message, include the word "**no_render**" will skip the site rendering + build process. Github Actions will directly use `/public` to host the website.
 
+#### Details
 
-### Details
-
-* The first deployment can take some time because Github Actions need to install these packages. After first successful deployment with Github Actions,
-all packages will be cached and no need to install again later. So later deployment will be much faster.
+* The first deployment can take some time because Github Actions need to install these packages. 
+After first successful deployment with Github Actions, all packages will be cached and 
+no need to install again later. So later deployment will be much faster.
 
  
 ## Deploy to Netlify
