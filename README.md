@@ -35,6 +35,13 @@ blogdown::serve_site()
 
 ## Prerequisites and Installation
 
+</details>
+
+<details>
+<summary><b>
+Option 1
+</b></summary
+
 ### Install [Hugo](https://github.com/gohugoio/hugo/releases)
 
 You need a recent extended version (we recommend version 0.79.0 or later) of Hugo 
@@ -62,12 +69,25 @@ Starting in [version 8](https://github.com/postcss/postcss-cli/blob/master/CHANG
 ```
 sudo npm install -D postcss
 ```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>
+Option 2
+</b></summary
+
 ### Install `blogdown`
 
 ```r
 remotes::install_git('rstudio/blogdown')
 blogdown::install_hugo(extended = TRUE)
 ```
+
+</details>
+
 
 # Documentation
 
