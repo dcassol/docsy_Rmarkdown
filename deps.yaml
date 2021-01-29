@@ -1,0 +1,34 @@
+CRAN: [
+  rmarkdown,
+  rbokeh,
+  flexdashboard,
+  ggplot2, 
+  ape,
+  batchtools,
+  magrittr,
+  kableExtra,
+  dplyr, 
+  xaringanthemer,
+  showtext
+]
+
+Bioc: [
+  SummarizedExperiment, 
+  systemPipeR, 
+  BiocParallel,
+  Biostrings,
+  Rsamtools,
+  GenomicRanges,
+  GenomicAlignments,
+  ShortRead,
+  BiocStyle
+]
+
+Github: [
+  rstudio/blogdown, 
+  gadenbuie/xaringanExtra
+]
+
+System: "libcurl4-openssl-dev libxml2-dev"
+
+
