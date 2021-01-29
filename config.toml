@@ -2,7 +2,7 @@
 # eg: "https://USERNAME.github.io/" if this is your first website
 # or "https://USERNAME.github.io/REPO_NAME/" if not the first
 # replace USERNAME and REPO_NAME
-baseURL = "http://www.dcassol.com/"
+baseURL = "http://www.dcassol.com/docsy_original/"
 title = "Docsy Rmarkdown"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit", "\\.utf8"]
 enableRobotsTXT = true
