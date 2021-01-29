@@ -75,7 +75,6 @@ For `Windows` and `macOS` please see instructions [here](https://www.docsy.dev/d
 
 #### Install PostCSS
 
-This section may not be required if you install Hugo from {blogdown}, but required if you install Hugo from commandline. 
 
 To build or update your site's CSS resources, you also need `PostCSS` to create the final assets. If you need to install it, you must have a recent version of `NodeJS` installed on your machine so you can use `npm`, the Node package manager. By default `npm` installs tools under the directory where you run `npm` install:
 
@@ -242,3 +241,12 @@ Click on the button above and follow these instructions:
 * Choose Repository Name and **Save & Deploy**
 
 </details>
+
+## Common Problems
+1. During site building: 
+`Error: Error building site: POSTCSS: failed to transform "scss/main.css" (text/css):resource "scss/scss/main.scss_4853eb546e7a6c0898ed71feae7357c0" not found in file cache`.
+
+```bash
+cd YOUR_REPO
+npm audit fix
+```
