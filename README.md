@@ -253,3 +253,4 @@ Click on the button above and follow these instructions:
 cd YOUR_REPO
 npm audit fix
 ```
+More [information](https://github.com/google/docsy/issues/235)
