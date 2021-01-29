@@ -1,15 +1,16 @@
 # Hugo Docsy + Rmarkdown support
 
-This is the Hugo [Docsy theme](https://github.com/google/docsy) combining {[blogdown](https://github.com/rstudio/blogdown)} support for Rmarkdown files.
+This is the Hugo [Docsy theme](https://github.com/google/docsy) combining {[blogdown](https://github.com/rstudio/blogdown)} support for `Rmarkdown` files.
 
 ## Key features
+
 1. R code highlighting
 2. Math equations (Mathjax)
 3. Top banner navigation dropdown menu
 4. Show/hide sidebars toggle
 5. Automatic deployment to Github pages or Netlify
 
-### Quick start
+## Quick start
 
 * Click on the **Use this Template** button.
 * Choose a Repository Name
@@ -26,13 +27,26 @@ This is the Hugo [Docsy theme](https://github.com/google/docsy) combining {[blog
 
 ```
 git clone --recurse-submodules --depth 1 https://github.com/<username>/<repository_name>.git
+cd <repository_name>
+```
+
+* Run the website locally
+
+```
+hugo server
+```
+
+* Run the website locally with `blogdown`
+
+```r
+blogdown::serve_site()
 ```
 
 ## Prerequisites and Installation
 
-### Install {Blogdown} and [Hugo](https://github.com/gohugoio/hugo/releases)
+### Install {[blogdown](https://github.com/rstudio/blogdown)} and [Hugo](https://github.com/gohugoio/hugo/releases)
 
-#### {blogdown}
+#### {[blogdown](https://github.com/rstudio/blogdown)}
 
 ```r
 installed.packages("rstudio/blogdown")
@@ -40,10 +54,11 @@ installed.packages("rstudio/blogdown")
 remotes::install_github("rstudio/blogdown")
 ```
 #### Hugo
+
 You need a recent extended version (we recommend version 0.79.0 or later) of Hugo 
 to do local builds and previews of sites that use Docsy.
 
-It is recommended to install Hugo from R for working with {blogdown}
+It is recommended to install `Hugo` from R for working with {blogdown}
 
 ```r
 blogdown::install_hugo(extended = TRUE)
@@ -62,7 +77,7 @@ For `Windows` and `macOS` please see instructions [here](https://www.docsy.dev/d
 
 This section may not be required if you install Hugo from {blogdown}, but required if you install Hugo from commandline. 
 
-To build or update your site’s CSS resources, you also need PostCSS to create the final assets. If you need to install it, you must have a recent version of NodeJS installed on your machine so you can use npm, the Node package manager. By default npm installs tools under the directory where you run npm install:
+To build or update your site's CSS resources, you also need `PostCSS` to create the final assets. If you need to install it, you must have a recent version of `NodeJS` installed on your machine so you can use `npm`, the Node package manager. By default `npm` installs tools under the directory where you run `npm` install:
 
 ```bash
 sudo npm install -D autoprefixer
@@ -75,11 +90,12 @@ sudo npm install -D postcss
 ### Run the website locally 
 
 #### with {blogdown}
+
 * Open R in console or Rstudio
 
 This repo contains a `.Rprofile` file that will automatically serve the site
-for you R starting directory is this newly cloned repository. otherwise, 
-change working directory to the repository and run 
+for you R starting directory is this newly cloned repository. Otherwise, 
+change working directory to the repository and run:
 
 ```r
 blogdown::serve_site()
@@ -87,7 +103,7 @@ blogdown::serve_site()
 
 You should see a website is opened in your local browser or Rstudio viewer.
 
-#### Run the website locally
+#### Run the website locally on the terminal
 
 ```bash
 cd YOUR_NEW_REPO_PATH
