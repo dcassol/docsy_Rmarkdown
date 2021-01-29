@@ -31,7 +31,7 @@ This Docsy Template Project uses the [Docsy](https://github.com/google/docsy) th
 <summary><b>
 ToDo
 </b></summary
-*Add documentation for the custom configuration.
+* Add documentation for the custom configuration.
 </details>
 
 # Deploy
