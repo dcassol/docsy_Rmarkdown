@@ -1,7 +1,7 @@
 # Hugo Docsy + Rmarkdown support
 
 This is the Hugo [Docsy theme](https://github.com/google/docsy) combining {[blogdown](https://github.com/rstudio/blogdown)} support for `Rmarkdown` files.
-
+ 
 ## Key features
 
 1. R code highlighting
