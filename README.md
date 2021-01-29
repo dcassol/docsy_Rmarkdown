@@ -8,9 +8,9 @@
 
 ### Usage locally
 
-* Go to our repository https://github.com/<username>/<repository_name>
+* Go to our repository `https://github.com/<username>/<repository_name>`
 * Click on the **Code** button.
-* Copy the URL https://github.com/<username>/<repository_name>.git
+* Copy the URL `https://github.com/<username>/<repository_name>.git`
 * Open terminal 
 
 ```
