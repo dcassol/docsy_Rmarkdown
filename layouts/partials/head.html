@@ -36,24 +36,6 @@
 <!-- site js and css -->
 <link rel="stylesheet" href="{{ "/css/site.css" }}"/>
 <script src="{{ "/js/site.js" }}"></script>
-<!-- MathJax configuration -->
-<script src="{{ "/js/mathjax3.1.2.js" }}"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-        processEscapes: true,
-        processEnvironments: true
-    },
-    // Center justify equations in code and markdown cells. Elsewhere
-    // we use CSS to left justify single line equations in code cells.
-    displayAlign: 'center',
-    "HTML-CSS": {
-        styles: {'.MathJax_Display': {"margin": 0}},
-        linebreaks: { automatic: true }
-    }
-});
 </script>
 {{ if .Site.Params.prism_syntax_highlighting }}
 <!-- stylesheet for Prism -->
