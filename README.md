@@ -87,7 +87,7 @@ blogdown::serve_site()
 
 You should see a website is opened in your local browser or Rstudio viewer.
 
-### Run the website locally
+#### Run the website locally
 
 ```bash
 cd YOUR_NEW_REPO_PATH
