@@ -40,7 +40,7 @@ ToDo
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/dcassol/docsy_original)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f513550d-005a-449f-84ac-b38e9d4c8586/deploy-status)](https://app.netlify.com/sites/docsy-spr/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e31739dd-9d43-4391-8f4a-9884495f8706/deploy-status)](https://app.netlify.com/sites/docsy-spr/deploys)
 
 <details>
 <summary><b>
