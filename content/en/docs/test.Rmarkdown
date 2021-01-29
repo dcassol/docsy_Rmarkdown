@@ -48,6 +48,7 @@ data <- data.frame(
 # Most basic violin chart
 p <- ggplot(data, aes(x=name, y=value, fill=name)) + # fill=name allow to automatically dedicate a color for each group
   geom_violin()
+p
 ```
 
 ## Violin Plot with 
