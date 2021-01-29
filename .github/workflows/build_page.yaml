@@ -1,9 +1,9 @@
 on:
   push:
      branches:
-       - master
+       - main
 
-name: build_and_goto_gh_pages
+name: build_and_deploy_gh_pages
 
 jobs:
   blogdown:
