@@ -62,6 +62,12 @@ Starting in [version 8](https://github.com/postcss/postcss-cli/blob/master/CHANG
 ```
 sudo npm install -D postcss
 ```
+### Install `blogdown`
+
+```r
+remotes::install_git('rstudio/blogdown')
+blogdown::install_hugo(extended = TRUE)
+```
 
 # Documentation
 
