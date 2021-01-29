@@ -52,11 +52,16 @@ For `Windows` and `macOS` please see instructions [here](https://www.docsy.dev/d
 
 To build or update your site’s CSS resources, you also need PostCSS to create the final assets. If you need to install it, you must have a recent version of NodeJS installed on your machine so you can use npm, the Node package manager. By default npm installs tools under the directory where you run npm install:
 
+```
 sudo npm install -D autoprefixer
 sudo npm install -D postcss-cli
-Starting in version 8 of postcss-cli, you must also separately install postcss:
+```
 
+Starting in [version 8](https://github.com/postcss/postcss-cli/blob/master/CHANGELOG.md) of `postcss-cli`, you must also separately install postcss:
+
+```
 sudo npm install -D postcss
+```
 
 # Documentation
 
