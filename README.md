@@ -210,8 +210,8 @@ no need to install again later. So later deployment will be much faster.
 
 **_Important:_** :
 
-1. In your local repository, in `/config.toml` change `baseURL` to "/" `baseURL="/"`
-1. In your local repository, in `/netlify.toml` change `publish` to "public" `baseURL="public"`
+1. In your local repository, before running `blogdown::build_site()`, in `/config.toml` change `baseURL` to "/" `baseURL="/"`
+1. In your local repository, before deployment, in `/netlify.toml` change `publish` to "public" `baseURL="public"`
 
 ### Deploy to Netlify with GitHub
 
