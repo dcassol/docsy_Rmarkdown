@@ -2,6 +2,7 @@
 # eg: "https://USERNAME.github.io/" if this is your first website
 # or "https://USERNAME.github.io/REPO_NAME/" if not the first
 # replace USERNAME and REPO_NAME
+# If deploy on Netlify, change it to "/"
 baseURL = "https://www.dcassol.com/docsy_Rmarkdown/"
 title = "Docsy Rmarkdown"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit", "\\.utf8"]
