@@ -214,7 +214,7 @@ enable = true
   weight = 1
   url = "/docs/"
 [[menu.main]]
-  name = "Example Rmd"
+  name = "Rmarkdown Example"
   url = "/docs/test/"
   parent = "Documentation"
   weight = 1
@@ -224,7 +224,7 @@ enable = true
   weight = 2
   url = "/tutorials/"
 [[menu.main]]
-  name = "Example Rmd"
+  name = "Reference Example"
   url = "/tutorials/reference/reference/"
   parent = "Tutorials"
   weight = 1
