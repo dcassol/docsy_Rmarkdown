@@ -208,20 +208,27 @@ enable = true
 
 
 # Top-level navigation (horizontal)
-## 
+##
 [[menu.main]]
   name = "Documentation"
   weight = 1
   url = "/docs/"
 [[menu.main]]
-  name = "Example Dropdown"
-  weight = 2
-  url = "/"
-[[menu.main]]
   name = "Example Rmd"
   url = "/docs/test/"
-  parent = "Example Dropdown"
+  parent = "Documentation"
   weight = 1
+##
+[[menu.main]]
+  name = "Tutorials"
+  weight = 2
+  url = "/tutorials/"
+[[menu.main]]
+  name = "Example Rmd"
+  url = "/tutorials/reference/reference/"
+  parent = "Tutorials"
+  weight = 1
+##
 [[menu.main]]
   name = "About"
   weight = 3
