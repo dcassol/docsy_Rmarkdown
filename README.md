@@ -206,13 +206,11 @@ no need to install again later. So later deployment will be much faster.
  
 ## Deploy to Netlify
 
-Open your `README` and change the next two Netlify badges:
-
-1. Change `repository=https://github.com/dcassol/docsy_original` to your username and repo name.
+Click this button to publish this template to your netlify account:
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/dcassol/docsy_Rmarkdown)
 
-2. Change status badges by going to Netlify website, login, go to `Site settings` > `Status badges`, copy the status badge. 
+You can get a status badge for you website by going to Netlify website, login, go to `Site settings` > `Status badges`, copy the status badge. 
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2de20eae-a002-40ef-8c96-1fe54f9528d4/deploy-status)](https://app.netlify.com/sites/docsy-rmarkdown/deploys)
 
