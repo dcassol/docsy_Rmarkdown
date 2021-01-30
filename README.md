@@ -162,7 +162,7 @@ Key feature: Fully automatic, **no need to build website locally**. Yes, you can
 * Specify any CRAN, Bioconductor or Github packages you have used, in `yaml` array format. Github packages need to be `user_name/repo_name`.
 * The site building is happening on Github by an Ubuntu system, so specify any system packages to install that are required by your R packages. Only a single line, use space to separate each system dependencies.
 
-#### 2. change base URL in config
+#### 2. Change base URL in config file
 
 Change your `baseURL` in the `/config.toml`. 
 
@@ -170,7 +170,7 @@ Change your `baseURL` in the `/config.toml`.
 * If not, baseURL = "/" to your repo's url, like "`https://USERNAME.github.io/REPO_NAME/`".
 * If you use custom domain, baseURL = "/" to your custom url, like "`https://MY_DOMAIN_NAME.com/`".
 
-#### 2. Create a new branch named `gh-pages`
+#### 3. Create a new branch named `gh-pages`
 
 ```
 git checkout -b gh-pages
@@ -184,14 +184,14 @@ Or go to Github website create a branch by [clicking](https://docs.github.com/en
 
 You do *not* need to push any content to this `gh-pages` branch. This branch is automatically managed by Github Actions. 
 
-#### 3. Github Setting 
+#### 4. Github Setting 
 
 * Click on **Setting**
 * click on **GitHub Pages** 
 * Select Branch *gh-pages* and folder */(root)* and click on **Save**
 * Click on **Enforce HTTPS** 
 
-#### 4. Trigger page build
+#### 5. Trigger page build
 
 * To trigger a build and deployment event, in the `git commit` message, include the word "**pg_build**", 
 e.g. `git commit -m "blabla pg_build"`. This will run the full rendering process (rendering and deploy the website may still take a few minutes).
@@ -206,20 +206,9 @@ no need to install again later. So later deployment will be much faster.
  
 ## Deploy to Netlify
 
-Click this button to publish this template to your netlify account:
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/dcassol/docsy_Rmarkdown)
-
-You can get a status badge for you website by going to Netlify website, login, go to `Site settings` > `Status badges`, copy the status badge. 
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2de20eae-a002-40ef-8c96-1fe54f9528d4/deploy-status)](https://app.netlify.com/sites/docsy-rmarkdown/deploys)
 
-<details>
-<summary><b>
-Deploy to Netlify with GitHub
-</b></summary
-
-Click on the button above and follow these instructions:
+### Deploy to Netlify with GitHub
 
 * Go online to [Netlify.com](https://www.netlify.com/).
 * Click on the **Sign Up** button.
@@ -231,12 +220,9 @@ Click on the button above and follow these instructions:
   * Specify `HUGO_VERSION` as the **Key** for the new variable, and `0.79.0` for the **Value**.
 * Click on **Deploy site**.
 
-</details>
+### Deploy to Netlify button
 
-<details>
-<summary><b>
-Deploy to Netlify button
-</b></summary
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/dcassol/docsy_Rmarkdown)
 
 > **_NOTE:_** At the moment, the button application is not cloning the content of the repository.
 
@@ -246,10 +232,19 @@ Click on the button above and follow these instructions:
 * Enter **Login** and **Password**
 * Choose Repository Name and **Save & Deploy**
 
+<details>
+<summary><b>
+Add your own status badge
+</b></summary
+
+You can get a status badge for you website by going to Netlify website, login, go to `Site settings` > `Status badges`, copy the status badge. 
+
 </details>
 
 ## Common Problems
-1. During site building: 
+
+### 1. During site building: 
+
 `Error: Error building site: POSTCSS: failed to transform "scss/main.css" (text/css):resource "scss/scss/main.scss_4853eb546e7a6c0898ed71feae7357c0" not found in file cache`.
 
 ```bash
@@ -257,3 +252,12 @@ cd YOUR_REPO
 npm audit fix
 ```
 More [information](https://github.com/google/docsy/issues/235)
+
+### 2. During site building: 
+
+`Error: Error building site: "~/content/en/_index.html:6:1": failed to extract shortcode: template for shortcode "blocks/cover" not found`.
+
+```bash
+cd YOUR_REPO
+git submodule update --init --recursive
+```
