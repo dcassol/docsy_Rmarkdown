@@ -208,6 +208,11 @@ no need to install again later. So later deployment will be much faster.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2de20eae-a002-40ef-8c96-1fe54f9528d4/deploy-status)](https://app.netlify.com/sites/docsy-rmarkdown/deploys)
 
+**_Important:_** :
+
+1. In your local repository, in `/config.toml` change `baseURL` to "/" `baseURL="/"`
+1. In your local repository, in `/netlify.toml` change `publish` to "public" `baseURL="public"`
+
 ### Deploy to Netlify with GitHub
 
 * Go online to [Netlify.com](https://www.netlify.com/).
