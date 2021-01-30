@@ -20,10 +20,11 @@ When you click the **Knit** button a document will be generated that includes bo
 summary(cars)
 ```
 
-## Math 
 
-$\sum(a+b)$
 
+## Math a
+
+$$\sum(a+b)$$
 ## Including Plots
 
 You can also embed plots, for example:
@@ -48,6 +49,7 @@ data <- data.frame(
 # Most basic violin chart
 p <- ggplot(data, aes(x=name, y=value, fill=name)) + # fill=name allow to automatically dedicate a color for each group
   geom_violin()
+p
 ```
 
 ## Violin Plot with 
