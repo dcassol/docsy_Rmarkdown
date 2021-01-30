@@ -132,6 +132,28 @@ new `.markdown` will be used by Hugo to generate HTML.
 
 4. After the `.markdown` generation, changes will be reflected in the local browser in a second. 
 
+### Adding Content
+
+* [Content sections and templates](https://www.docsy.dev/docs/adding-content/content/#content-section)
+
+* [Navigation and Search](https://www.docsy.dev/docs/adding-content/navigation/#top-level-menu)
+
+* [Adding a version drop-down](https://www.docsy.dev/docs/adding-content/versioning/)
+
+  * Edit the `/config.toml`:
+  
+```yaml
+[[menu.main]]
+    name = "GitHub"
+    weight = 1
+    url = "https://github.com/dcassol/docsy_Rmarkdown"
+[[menu.main]]
+  name = "Reference"
+  url = "/docs/reference/"
+  parent = "GitHub"
+  weight = 1
+```
+
 ## Build the website
 
 If you are ready to publish the website, use
