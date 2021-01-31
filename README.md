@@ -298,6 +298,6 @@ Error : Failed to render content/en/docs/test.Rmarkdown
 ```
 Update pandoc >= 2.12 solves the problem. Use `rmarkdown::pandoc_version()` to check version.
 
-If you use Rstudio, simple update to the latest version which comes with pandoc >= 2.12 and 
-rmarkdown will use it automatically. Otherwise, you need to update pandoc by your self.
+If you use Rstudio, simply update Rstudio to the latest version which comes with pandoc >= 2.12 and 
+rmarkdown will use it automatically. Otherwise, you need to [update pandoc](https://pandoc.org/installing.html) by yourself.
 
