@@ -251,7 +251,9 @@ no need to install again later. So later deployment will be much faster.
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/dcassol/docsy_Rmarkdown)
 
-> **_NOTE:_** At the moment, the button application is not cloning the content of the repository.
+> **_NOTE:_** Gitib does not allow third party tools to create/modify Github actions workflows and this template contains workflows, so 
+clicking the button above **will not copy code** to your new repository, but it will publish website to netlify. Follow the instructions above to 
+create a repository with code. 
 
 Click on the button above and follow these instructions:
 
