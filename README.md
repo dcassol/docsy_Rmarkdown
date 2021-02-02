@@ -292,6 +292,7 @@ git submodule update --init --recursive
 ```
 
 ### 3. Rmarkdown rendering
+
 ```r
 The extension tex_math_dollars is not supported for gfm
 Error: pandoc document conversion failed with error 23
@@ -302,4 +303,16 @@ Update pandoc >= 2.12 solves the problem. Use `rmarkdown::pandoc_version()` to c
 
 If you use Rstudio, simply update Rstudio to the latest version which comes with pandoc >= 2.12 and 
 rmarkdown will use it automatically. Otherwise, you need to [update pandoc](https://pandoc.org/installing.html) by yourself.
+
+## Additional commands 
+
+### 1. `docsy` theme update 
+
+* Adding and update the theme
+
+```
+git submodule add https://github.com/google/docsy.git themes/docsy
+git submodule update --init --recursive
+```
+
 
