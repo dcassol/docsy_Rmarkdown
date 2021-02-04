@@ -10,7 +10,13 @@ type: docs
 
 {{% pageinfo %}}
 This is a placeholder page that shows you how to use this template site.
+
+1. **For Rmarkdown integrations and new features, read [Rmarkdown](/rmarkdown) section**
+2. This template is provided by [docsy](https://github.com/google/docsy). You
+can use this similar structure to build to docs.
+
 {{% /pageinfo %}}
+
 
 
 This section is where the user documentation for your project lives - all the information your users need to understand and successfully use your project. 

@@ -8,6 +8,7 @@ title = "Docsy Rmarkdown"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit", "\\.utf8"]
 enableRobotsTXT = true
 relativeURLs = true
+
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
 theme = ["docsy"]
 # Will give values to .Lastmod etc.
@@ -98,7 +99,15 @@ privacy_policy = "https://policies.google.com/privacy"
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
 
+# server location time will be used to parse timestamps in markdown headers
+# See this for locations https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+# if not provided, UTC will be used
+serverTimeLocation = "America/Los_Angeles"
 
+# When the "visibleDate" is specified in markdown header, how to hide the html
+# one of "soft" or "hard". soft will be using javascript, hard will prevent the
+# content being added at markdown rendering level
+visHideMethod = "soft"
 
 # A link to latest version of the docs. Used in the "version-banner" partial to
 # point people to the main doc site.
@@ -220,21 +229,21 @@ enable = true
   name = "Documentation"
   weight = 1
   url = "/docs/"
-[[menu.main]]
-  name = "Rmarkdown Example"
-  url = "/docs/test/"
-  parent = "Documentation"
-  weight = 1
+  [[menu.main]]
+    name = "overview"
+    url = "/docs/overview/"
+    parent = "Documentation"
+    weight = 1
 ##
 [[menu.main]]
-  name = "Tutorials"
+  name = "Rmarkdown"
   weight = 2
-  url = "/tutorials/"
-[[menu.main]]
-  name = "Reference Example"
-  url = "/tutorials/reference/reference/"
-  parent = "Tutorials"
-  weight = 1
+  url = "/rmarkdown/"
+  [[menu.main]]
+    name = "Basic Example"
+    url = "/rmarkdown/examples/example_rmd"
+    parent = "Rmarkdown"
+    weight = 1
 ##
 [[menu.main]]
   name = "About"

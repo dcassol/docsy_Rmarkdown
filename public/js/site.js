@@ -72,8 +72,40 @@ $(() => {
 
   var pageMetaHeight = $('.td-page-meta').height() + 40;
   $('#TableOfContents ul li').on('toc-active', function(){
-    console.log($(this).position().top)
     if (this.offsetTop < window.innerHeight/2) return $(".td-toc").scrollTop(0);
     $(".td-toc").scrollTop(this.offsetTop - window.innerHeight/2 - 20);
   });
 });
+
+// soft hiding content
+function hideContent(visDate){
+  var visTime = Date.parse(visDate);
+  // get world clock time
+  var currentTime;
+  $.ajax({
+        url: "http://worldclockapi.com/api/json/utc/now",
+        type: 'GET',
+        dataType: 'json',
+        async: false
+    })
+    .done(function(res) {
+          currentTime = Date.parse(res.currentDateTime)
+    })
+    .fail(function() {
+          currentTime = new Date();
+    });
+
+  if(visTime > currentTime) {
+    $('.td-toc').remove();
+    $('[role="main"]').css("display", "none")
+    $(()=>{$('[role="main"]').remove()});
+    $('.td-main .row.flex-xl-nowrap').append(
+      `
+      <div class="col-12 col-md-9 col-xl-10 pl-md-5" style="margin-top: 50vh">
+        <h1 class="center-text"> Content not visible before ${visDate}</h1>
+      </div>
+      `
+    );
+  }
+
+}
