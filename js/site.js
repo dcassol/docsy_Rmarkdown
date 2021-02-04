@@ -83,13 +83,13 @@ function hideContent(visDate){
   // get world clock time
   var currentTime;
   $.ajax({
-        url: "http://worldclockapi.com/api/json/utc/now",
+        url: "https://worldtimeapi.org/api/timezone/Etc/UTC",
         type: 'GET',
         dataType: 'json',
         async: false
     })
     .done(function(res) {
-          currentTime = Date.parse(res.currentDateTime)
+          currentTime = Date.parse(res.datetime)
     })
     .fail(function() {
           currentTime = new Date();
