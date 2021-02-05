@@ -797,30 +797,6 @@ hugo serve -b &amp;quot;http://localhost&amp;quot;
     
     <item>
       <title>Rmarkdown: Visible Example</title>
-      <link>/rmarkdown/examples/toc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rmarkdown/examples/toc/</guid>
-      <description>
-        
-        
-        &lt;h2 id=&#34;visibility-example&#34;&gt;visibility example&lt;/h2&gt;
-&lt;p&gt;You should be able to see this page.&lt;/p&gt;
-&lt;p&gt;Header of this page&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;---
-title: &amp;quot;Visible Example&amp;quot;
-linkTitle: &amp;quot;Installation&amp;quot;
-weight: 2
-type: docs
-visibleDate: &amp;quot;2021-02-01&amp;quot;
----
-&lt;/code&gt;&lt;/pre&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Rmarkdown: Visible Example</title>
       <link>/rmarkdown/examples/visible/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1156,6 +1132,30 @@ bar := &amp;quot;foo&amp;quot;;
 &lt;h3 id=&#34;external-links&#34;&gt;External Links&lt;/h3&gt;
 &lt;p&gt;Stumptown PBR&amp;amp;B keytar plaid street art, forage XOXO pitchfork selvage affogato green juice listicle pickled everyday carry hashtag. Organic sustainable letterpress sartorial scenester intelligentsia swag bushwick. Put a bird on it stumptown neutra locavore. IPhone typewriter messenger bag narwhal. Ennui cold-pressed seitan flannel keytar, single-origin coffee adaptogen occupy yuccie williamsburg chillwave shoreditch forage waistcoat.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;This is the final element on the page and there should be no margin below this.
+&lt;/code&gt;&lt;/pre&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Rmarkdown: Invisible Example</title>
+      <link>/rmarkdown/examples/invisible/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rmarkdown/examples/invisible/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;invisibility-example&#34;&gt;Invisibility example&lt;/h2&gt;
+&lt;p&gt;You should not be able to see this page.&lt;/p&gt;
+&lt;p&gt;Header of this page&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: &amp;quot;Visible Example&amp;quot;
+linkTitle: &amp;quot;Installation&amp;quot;
+weight: 2
+type: docs
+visibleDate: &amp;quot;2121-02-01&amp;quot;
+---
 &lt;/code&gt;&lt;/pre&gt;
 
       </description>
@@ -1972,10 +1972,10 @@ Add your own status badge
     
     <item>
       <title>Rmarkdown: TOC Example</title>
-      <link>/rmarkdown/examples/invisible/</link>
+      <link>/rmarkdown/examples/toc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rmarkdown/examples/invisible/</guid>
+      <guid>/rmarkdown/examples/toc/</guid>
       <description>
         
         

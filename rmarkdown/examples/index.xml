@@ -84,30 +84,6 @@ ggplotly(p)
     
     <item>
       <title>Rmarkdown: Visible Example</title>
-      <link>/rmarkdown/examples/toc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rmarkdown/examples/toc/</guid>
-      <description>
-        
-        
-        &lt;h2 id=&#34;visibility-example&#34;&gt;visibility example&lt;/h2&gt;
-&lt;p&gt;You should be able to see this page.&lt;/p&gt;
-&lt;p&gt;Header of this page&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;---
-title: &amp;quot;Visible Example&amp;quot;
-linkTitle: &amp;quot;Installation&amp;quot;
-weight: 2
-type: docs
-visibleDate: &amp;quot;2021-02-01&amp;quot;
----
-&lt;/code&gt;&lt;/pre&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Rmarkdown: Visible Example</title>
       <link>/rmarkdown/examples/visible/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -131,11 +107,35 @@ visibleDate: &amp;quot;2021-02-01&amp;quot;
     </item>
     
     <item>
-      <title>Rmarkdown: TOC Example</title>
+      <title>Rmarkdown: Invisible Example</title>
       <link>/rmarkdown/examples/invisible/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rmarkdown/examples/invisible/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;invisibility-example&#34;&gt;Invisibility example&lt;/h2&gt;
+&lt;p&gt;You should not be able to see this page.&lt;/p&gt;
+&lt;p&gt;Header of this page&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: &amp;quot;Visible Example&amp;quot;
+linkTitle: &amp;quot;Installation&amp;quot;
+weight: 2
+type: docs
+visibleDate: &amp;quot;2121-02-01&amp;quot;
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Rmarkdown: TOC Example</title>
+      <link>/rmarkdown/examples/toc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rmarkdown/examples/toc/</guid>
       <description>
         
         
