@@ -83,11 +83,11 @@ ggplotly(p)
     </item>
     
     <item>
-      <title>Rmarkdown: Invisible Example</title>
-      <link>/rmarkdown/examples/invisible/</link>
+      <title>Rmarkdown: Visible Example</title>
+      <link>/rmarkdown/examples/toc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rmarkdown/examples/invisible/</guid>
+      <guid>/rmarkdown/examples/toc/</guid>
       <description>
         
         
@@ -99,7 +99,7 @@ title: &amp;quot;Visible Example&amp;quot;
 linkTitle: &amp;quot;Installation&amp;quot;
 weight: 2
 type: docs
-visibleDate: &amp;quot;2121-02-01&amp;quot;
+visibleDate: &amp;quot;2021-02-01&amp;quot;
 ---
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -126,6 +126,251 @@ type: docs
 visibleDate: &amp;quot;2021-02-01&amp;quot;
 ---
 &lt;/code&gt;&lt;/pre&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Rmarkdown: TOC Example</title>
+      <link>/rmarkdown/examples/invisible/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rmarkdown/examples/invisible/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;strong&gt;This example shows how a table of content (TOC) is highlighted and automatically scroll&lt;/strong&gt;
+&lt;strong&gt;when the TOC is very long.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;title-1&#34;&gt;Title 1&lt;/h2&gt;
+&lt;h3 id=&#34;sub-1&#34;&gt;sub 1&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-2&#34;&gt;sub 2&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-1&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-3&#34;&gt;sub 3&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-2&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-4&#34;&gt;sub 4&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-3&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-5&#34;&gt;sub 5&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-4&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;title-2&#34;&gt;Title 2&lt;/h2&gt;
+&lt;h3 id=&#34;sub-1-1&#34;&gt;sub 1&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-5&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-2-1&#34;&gt;sub 2&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-6&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-3-1&#34;&gt;sub 3&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-7&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-4-1&#34;&gt;sub 4&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-8&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-5-1&#34;&gt;sub 5&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-9&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;title-3&#34;&gt;Title 3&lt;/h2&gt;
+&lt;h3 id=&#34;sub-1-2&#34;&gt;sub 1&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-10&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-2-2&#34;&gt;sub 2&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-11&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-3-2&#34;&gt;sub 3&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-12&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-4-2&#34;&gt;sub 4&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-13&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-5-2&#34;&gt;sub 5&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-14&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;title-4&#34;&gt;Title 4&lt;/h2&gt;
+&lt;h3 id=&#34;sub-1-3&#34;&gt;sub 1&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-2-3&#34;&gt;sub 2&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-3-3&#34;&gt;sub 3&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-4-3&#34;&gt;sub 4&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-5-3&#34;&gt;sub 5&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;title-5&#34;&gt;Title 5&lt;/h2&gt;
+&lt;h3 id=&#34;sub-1-4&#34;&gt;sub 1&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-2-4&#34;&gt;sub 2&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-3-4&#34;&gt;sub 3&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-4-4&#34;&gt;sub 4&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-5-4&#34;&gt;sub 5&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
 
       </description>
     </item>

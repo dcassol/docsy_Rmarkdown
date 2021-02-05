@@ -741,18 +741,8 @@ bar := &amp;quot;foo&amp;quot;;
 &lt;li&gt;Copy the URL &lt;code&gt;https://github.com/&amp;lt;username&amp;gt;/&amp;lt;repository_name&amp;gt;.git&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Open terminal&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;git clone --recurse-submodules --depth 1 https://github.com/&amp;lt;username&amp;gt;/&amp;lt;repository_name&amp;gt;.git
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone --recurse-submodules --depth 1 https://github.com/&amp;lt;username&amp;gt;/&amp;lt;repository_name&amp;gt;.git
 cd &amp;lt;repository_name&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;Run the website locally&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;hugo server
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;Run the website locally with &lt;code&gt;blogdown&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;blogdown::serve_site()
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;prerequisites-and-installation&#34;&gt;Prerequisites and Installation&lt;/h2&gt;
 &lt;h3 id=&#34;install-blogdown-and-hugo&#34;&gt;Install {blogdown} and Hugo&lt;/h3&gt;
@@ -774,6 +764,7 @@ hugo version
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;For &lt;code&gt;Windows&lt;/code&gt; and &lt;code&gt;macOS&lt;/code&gt; please see instructions &lt;a href=&#34;https://www.docsy.dev/docs/getting-started/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h4 id=&#34;install-postcss&#34;&gt;Install PostCSS&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://nodejs.org/en/download/&#34;&gt;Download &lt;code&gt;node&lt;/code&gt; and &lt;code&gt;npm&lt;/code&gt;&lt;/a&gt; if you do not have.&lt;/p&gt;
 &lt;p&gt;To build or update your site&amp;rsquo;s CSS resources, you also need &lt;code&gt;PostCSS&lt;/code&gt; to create the final assets. If you need to install it, you must have a recent version of &lt;code&gt;NodeJS&lt;/code&gt; installed on your machine so you can use &lt;code&gt;npm&lt;/code&gt;, the Node package manager. By default &lt;code&gt;npm&lt;/code&gt; installs tools under the directory where you run &lt;code&gt;npm&lt;/code&gt; install:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo npm install -D autoprefixer
 sudo npm install -D postcss-cli
@@ -786,7 +777,7 @@ cd &amp;lt;repository_name&amp;gt;
 npm audit fix
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;run-the-website-locally&#34;&gt;Run the website locally&lt;/h3&gt;
-&lt;h4 id=&#34;with-blogdown&#34;&gt;with {blogdown}&lt;/h4&gt;
+&lt;h4 id=&#34;with-blogdown-recommended&#34;&gt;with {blogdown} (&lt;strong&gt;Recommended&lt;/strong&gt;)&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Open R in console or Rstudio&lt;/li&gt;
 &lt;/ul&gt;
@@ -796,20 +787,20 @@ change working directory to the repository and run:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;blogdown::serve_site()
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You should see a website is opened in your local browser or Rstudio viewer.&lt;/p&gt;
-&lt;h4 id=&#34;run-the-website-locally-on-the-terminal&#34;&gt;Run the website locally on the terminal&lt;/h4&gt;
+&lt;h4 id=&#34;run-the-website-locally-in-the-terminal&#34;&gt;Run the website locally in the terminal&lt;/h4&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd YOUR_NEW_REPO_PATH
-hugo server
+hugo serve -b &amp;quot;http://localhost&amp;quot; 
 &lt;/code&gt;&lt;/pre&gt;
 
       </description>
     </item>
     
     <item>
-      <title>Rmarkdown: Invisible Example</title>
-      <link>/rmarkdown/examples/invisible/</link>
+      <title>Rmarkdown: Visible Example</title>
+      <link>/rmarkdown/examples/toc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rmarkdown/examples/invisible/</guid>
+      <guid>/rmarkdown/examples/toc/</guid>
       <description>
         
         
@@ -821,7 +812,7 @@ title: &amp;quot;Visible Example&amp;quot;
 linkTitle: &amp;quot;Installation&amp;quot;
 weight: 2
 type: docs
-visibleDate: &amp;quot;2121-02-01&amp;quot;
+visibleDate: &amp;quot;2021-02-01&amp;quot;
 ---
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -1181,10 +1172,17 @@ bar := &amp;quot;foo&amp;quot;;
         
         &lt;h2 id=&#34;create-your-website-content&#34;&gt;Create your website content&lt;/h2&gt;
 &lt;p&gt;This Docsy Template Project uses the &lt;a href=&#34;https://github.com/google/docsy&#34;&gt;Docsy&lt;/a&gt; theme, and we have provided a skeleton documentation structure for you to use when you clone the repo. The full documentation can be found &lt;a href=&#34;https://www.docsy.dev/docs/deployment/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;One example Rmarkdown file, &lt;em&gt;/content/en/docs/test.Rmarkdown&lt;/em&gt; is also included in the skeleton.&lt;/p&gt;
+&lt;h3 id=&#34;workf-with-r-markdown&#34;&gt;Workf with R markdown&lt;/h3&gt;
+&lt;p&gt;One example Rmarkdown file, &lt;strong&gt;&lt;em&gt;/content/en/rmarkdown/examples/example.Rmarkdown&lt;/em&gt;&lt;/strong&gt; is also included in the skeleton.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;To modify website content, after running &lt;code&gt;blogdown::serve_site()&lt;/code&gt;, change files in &lt;code&gt;/content/en&lt;/code&gt; directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Change &lt;strong&gt;_/content/en/&lt;em&gt;index.html&lt;/em&gt;&lt;/strong&gt; for the homepage.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add your markdown/ R markdown files inside the &lt;code&gt;/content/en&lt;/code&gt; folder.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;blockquote&gt;
@@ -1192,18 +1190,21 @@ bar := &amp;quot;foo&amp;quot;;
 The &lt;code&gt;.Rmd&lt;/code&gt; files may still work but one of the issues includes lack of R code highlighting.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;2.1 When you are writing the Rmarkdown files, a good practice is to only use one level 1 heading (&amp;quot;#&amp;quot;). This theme has already
+&lt;li&gt;
+&lt;p&gt;When you are writing the Rmarkdown files, a good practice is to only use one level 1 heading (&amp;quot;#&amp;quot;). This theme has already
 created a H1 for you which is the main title, so try to aviod the H1 heading in other part of the document. By default, this template assumes you are not
 using other H1 headings and the table of content (TOC) starts with H2, and other additional H1 heading will be displayed in main text
 but will &lt;strong&gt;not show up on the TOC&lt;/strong&gt;. If you wish to start with H1 on your TOC, change &lt;code&gt;[markup.tableOfContents]&lt;/code&gt; in &lt;code&gt;/config.toml&lt;/code&gt;.&lt;/p&gt;
-&lt;ol start=&#34;3&#34;&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;When you save your modified Rmarkdown files, {blogdown} will automatically render the file to &lt;code&gt;.markdown&lt;/code&gt; extension. This
-new &lt;code&gt;.markdown&lt;/code&gt; will be used by Hugo to generate HTML.&lt;/p&gt;
+new &lt;code&gt;.markdown&lt;/code&gt; will be used by Hugo to generate HTML. Usually you do not manually edit &lt;code&gt;.markdown&lt;/code&gt; files.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;After the &lt;code&gt;.markdown&lt;/code&gt; generation, changes will be reflected in the local browser in a second.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Before building the website, check out docs for &lt;a href=&#34;../rmarkdown/new_features/&#34;&gt;new features&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;other-content&#34;&gt;Other Content&lt;/h3&gt;
@@ -1892,8 +1893,8 @@ bar := &amp;quot;foo&amp;quot;;
 &lt;p&gt;Change your &lt;code&gt;baseURL&lt;/code&gt; in the &lt;code&gt;/config.toml&lt;/code&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;If this is your first github website, change the baseURL = &amp;ldquo;/&amp;rdquo; to your github base &lt;code&gt;url&lt;/code&gt;, like &amp;ldquo;&lt;code&gt;https://USERNAME.github.io/&lt;/code&gt;&amp;rdquo;.&lt;/li&gt;
-&lt;li&gt;If not, baseURL = &amp;ldquo;/&amp;rdquo; to your repo&amp;rsquo;s url, like &amp;ldquo;&lt;code&gt;https://USERNAME.github.io/REPO_NAME/&lt;/code&gt;&amp;rdquo;.&lt;/li&gt;
-&lt;li&gt;If you use custom domain, baseURL = &amp;ldquo;/&amp;rdquo; to your custom url, like &amp;ldquo;&lt;code&gt;https://MY_DOMAIN_NAME.com/&lt;/code&gt;&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;If not, change baseURL = &amp;ldquo;/&amp;rdquo; to your repo&amp;rsquo;s url, like &amp;ldquo;&lt;code&gt;https://USERNAME.github.io/REPO_NAME/&lt;/code&gt;&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;If you use custom domain, change baseURL = &amp;ldquo;/&amp;rdquo; to your custom url, like &amp;ldquo;&lt;code&gt;https://MY_DOMAIN_NAME.com/&lt;/code&gt;&amp;rdquo;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;3-create-a-new-branch-named-gh-pages&#34;&gt;3. Create a new branch named &lt;code&gt;gh-pages&lt;/code&gt;&lt;/h4&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout -b gh-pages
@@ -1965,6 +1966,251 @@ Add your own status badge
 &lt;/b&gt;&lt;/summary
 &lt;p&gt;You can get a status badge for you website by going to Netlify website, login, go to &lt;code&gt;Site settings&lt;/code&gt; &amp;gt; &lt;code&gt;Status badges&lt;/code&gt;, copy the status badge.&lt;/p&gt;
 &lt;/details&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Rmarkdown: TOC Example</title>
+      <link>/rmarkdown/examples/invisible/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rmarkdown/examples/invisible/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;strong&gt;This example shows how a table of content (TOC) is highlighted and automatically scroll&lt;/strong&gt;
+&lt;strong&gt;when the TOC is very long.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;title-1&#34;&gt;Title 1&lt;/h2&gt;
+&lt;h3 id=&#34;sub-1&#34;&gt;sub 1&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-2&#34;&gt;sub 2&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-1&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-3&#34;&gt;sub 3&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-2&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-4&#34;&gt;sub 4&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-3&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-5&#34;&gt;sub 5&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-4&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;title-2&#34;&gt;Title 2&lt;/h2&gt;
+&lt;h3 id=&#34;sub-1-1&#34;&gt;sub 1&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-5&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-2-1&#34;&gt;sub 2&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-6&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-3-1&#34;&gt;sub 3&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-7&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-4-1&#34;&gt;sub 4&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-8&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-5-1&#34;&gt;sub 5&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-9&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;title-3&#34;&gt;Title 3&lt;/h2&gt;
+&lt;h3 id=&#34;sub-1-2&#34;&gt;sub 1&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-10&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-2-2&#34;&gt;sub 2&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-11&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-3-2&#34;&gt;sub 3&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-12&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-4-2&#34;&gt;sub 4&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-13&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-5-2&#34;&gt;sub 5&lt;/h3&gt;
+&lt;h4 id=&#34;sub-sub-14&#34;&gt;sub-sub&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;title-4&#34;&gt;Title 4&lt;/h2&gt;
+&lt;h3 id=&#34;sub-1-3&#34;&gt;sub 1&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-2-3&#34;&gt;sub 2&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-3-3&#34;&gt;sub 3&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-4-3&#34;&gt;sub 4&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-5-3&#34;&gt;sub 5&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;title-5&#34;&gt;Title 5&lt;/h2&gt;
+&lt;h3 id=&#34;sub-1-4&#34;&gt;sub 1&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-2-4&#34;&gt;sub 2&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-3-4&#34;&gt;sub 3&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-4-4&#34;&gt;sub 4&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sub-5-4&#34;&gt;sub 5&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;/ul&gt;
 
       </description>
     </item>
@@ -2607,14 +2853,16 @@ bar := &amp;quot;foo&amp;quot;;
     
     <item>
       <title>Rmarkdown: New Features</title>
-      <link>/rmarkdown/new_features/new_features/</link>
+      <link>/rmarkdown/new_features/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rmarkdown/new_features/new_features/</guid>
+      <guid>/rmarkdown/new_features/</guid>
       <description>
         
         
-        &lt;h2 id=&#34;r-code-highlighting&#34;&gt;R code highlighting&lt;/h2&gt;
+        &lt;p&gt;New features we have added along with the R markdown support. These new features
+do not exist in original doscy theme.&lt;/p&gt;
+&lt;h2 id=&#34;r-code-highlighting&#34;&gt;R code highlighting&lt;/h2&gt;
 &lt;p&gt;R code highlighting is done by &lt;a href=&#34;https://prismjs.com/index.html&#34;&gt;prism.js&lt;/a&gt;. Simply
 add a code chunk in markdown or rmarkdown files with r specified will work:&lt;/p&gt;
 &lt;p&gt;In R markdown:&lt;/p&gt;
@@ -2632,7 +2880,7 @@ seq(1, 10)
 1 + 1
 ```
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;which is the same, but code will never be evaluated in simple markdowns&lt;/p&gt;
+&lt;p&gt;which is the same, but code will not be evaluated in simple markdowns&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;1 + 1
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;math-equations-mathjax&#34;&gt;Math equations (Mathjax)&lt;/h2&gt;
@@ -2680,9 +2928,9 @@ read &lt;a href=&#34;../rmarkdown/deploy&#34;&gt;deploy&lt;/a&gt; for details.&l
 &lt;p&gt;Sometimes for class teaching or other requirements, some pages need to be hidden
 before a specific date. We have added this support:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;In your markdown/ R markdown header, add &lt;code&gt;visibleDate&lt;/code&gt; date entry and specify
-a date in &lt;strong&gt;&lt;em&gt;ISO 8601&lt;/em&gt;&lt;/strong&gt; format: &lt;code&gt;YYYY-MM-DD HH:MM:SS&lt;/code&gt;, for example&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;
+&lt;p&gt;In your markdown/ R markdown header, add &lt;code&gt;visibleDate&lt;/code&gt; date entry and specify
+a date in &lt;strong&gt;&lt;em&gt;ISO 8601&lt;/em&gt;&lt;/strong&gt; format: &lt;code&gt;YYYY-MM-DD HH:MM:SS&lt;/code&gt;, for example&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;---
 title: &amp;quot;Overview&amp;quot;
 linkTitle: &amp;quot;Overview&amp;quot;
@@ -2694,40 +2942,46 @@ visibleDate: &amp;quot;2021-02-01&amp;quot;
 are optional.&lt;/p&gt;
 &lt;p&gt;Note: hours are in 24 hour format. Hour, minute, second must be provided all together,
 providing a single, or two of them will not work.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;- `YYYY-MM-DD HH` not work
-- `YYYY-MM-DD HH:SS` not work
-- `YYYY-MM-DD SS` not work
-- `YYYY-MM-DD HH:MM:SS` work!
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;Go to &lt;code&gt;/config.toml&lt;/code&gt; change &lt;code&gt;serverTimeLocation&lt;/code&gt; your server time zone location
-Change it to the time zone location of &lt;strong&gt;where your website rendering server&lt;/strong&gt; (where do you run &lt;code&gt;blogdown::build_site()&lt;/code&gt;).
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;YYYY-MM-DD HH&lt;/code&gt; not work&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;YYYY-MM-DD HH:SS&lt;/code&gt; not work&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;YYYY-MM-DD SS&lt;/code&gt; not work&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;YYYY-MM-DD HH:MM:SS&lt;/code&gt; work!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to &lt;code&gt;/config.toml&lt;/code&gt; change &lt;code&gt;serverTimeLocation&lt;/code&gt; your server time zone location
+Change it to the time zone location of where your website rendering server (&lt;strong&gt;where do you run &lt;code&gt;blogdown::build_site()&lt;/code&gt;&lt;/strong&gt;).
 If you are running locally, this time location will be the same as your local time,
-if you are using github actions, this time is the github server time location.&lt;/li&gt;
-&lt;/ol&gt;
+if you are using github actions, this time is the github server time location.&lt;/p&gt;
 &lt;p&gt;If not provided, UTC time is used.&lt;/p&gt;
-&lt;ol start=&#34;3&#34;&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;In &lt;code&gt;/config.toml&lt;/code&gt; specify &lt;code&gt;visHideMethod&lt;/code&gt;, one of &amp;ldquo;soft&amp;rdquo; or &amp;ldquo;hard&amp;rdquo;
 How to hide the content before the visible date.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;soft&lt;/strong&gt;: default if not provided, use javascript to remove content.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The whole content is still sent to readers&lt;/strong&gt;, we just did some tricks to remove the
-content is post-processing. If some browsers block javascript, some content may
+&lt;p&gt;&lt;strong&gt;The whole content is still sent to readers&lt;/strong&gt;, we use client-end javascript to remove the
+content in post-processing. If some browsers block javascript, some content may
 leak to reader. However, you do not need to rebuild the site after the visible date.
 Content will &lt;strong&gt;automatically become visible&lt;/strong&gt; for readers.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;hard&lt;/strong&gt;: remove content is removed during markdown to HTML generation.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Whole content will not sent to readers&lt;/strong&gt;. However, you need to rebuild  + redeploy the site
+&lt;p&gt;&lt;strong&gt;hard&lt;/strong&gt;: Content is removed during markdown/Rmarkdown to HTML generation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Whole content will not be sent to readers&lt;/strong&gt;. However, you need to rebuild  + redeploy the site
 after the visible date. Content will &lt;strong&gt;NOT automatically become visible&lt;/strong&gt; for readers.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;We recommend to use &amp;ldquo;soft&amp;rdquo; for non-top secrets, like normal documents for a tool.
-For site with sensitive content like homework solutions, &amp;ldquo;hard&amp;rdquo; may be better.&lt;/p&gt;
+For site with sensitive content like exam solutions, &amp;ldquo;hard&amp;rdquo; may be better.&lt;/p&gt;
+&lt;h2 id=&#34;table-of-content-highlighting-and-scrolling&#34;&gt;Table of content highlighting and scrolling&lt;/h2&gt;
+&lt;p&gt;Right side table of content (TOC) bar will be automatically highlighted for readers current
+visible sections titles. This is a good indicator to show where the users are.&lt;/p&gt;
+&lt;p&gt;If the TOC is too long, when readers scroll the page, TOC bar will automatically scroll
+as well.&lt;/p&gt;
 
       </description>
     </item>
