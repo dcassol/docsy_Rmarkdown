@@ -230,8 +230,8 @@ enable = true
   weight = 1
   url = "/docs/"
 [[menu.main]]
-  name = "overview"
-  url = "/docs/overview/"
+  name = "Full Documentation"
+  url = "https://www.docsy.dev/docs/"
   parent = "Documentation"
   weight = 1
 ##
