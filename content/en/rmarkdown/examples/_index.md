@@ -1,7 +1,6 @@
 ---
 title: "Examples"
 linkTitle: "Examples"
-weight: 99
 type: docs
 ---
 

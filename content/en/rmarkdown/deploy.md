@@ -49,6 +49,21 @@ You do *not* need to push any content to this `gh-pages` branch. This branch is 
 e.g. `git commit -m "blabla pg_build"`. This will run the full rendering process (rendering and deploy the website may still take a few minutes).
 * If you have build the site locally and updated the `/public` locally, in your commit message, include the word "**no_render**" will skip the site rendering + build process. Github Actions will directly use `/public` to host the website.
 
+#### 6. Add CNAME file cname
+
+If the webpage requires CNAME file, we can set the `cname` option in the `.github/workflows/build_page.yaml`.
+
+For more details about CNAME, read the official documentation: [Managing a custom domain for your GitHub Pages site - GitHub Help](https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site).
+
+```
+- name: Deploy
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    github_token: ${{ secrets.GITHUB_TOKEN }}
+    publish_dir: ./public
+    cname: <add CNAME>
+```
+
 #### Details
 
 * The first deployment can take some time because Github Actions need to install these packages. 

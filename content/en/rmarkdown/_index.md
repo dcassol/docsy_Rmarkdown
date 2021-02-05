@@ -1,10 +1,6 @@
 ---
 title: " Hugo Docsy + Rmarkdown support"
 linkTitle: "Rmarkdown"
-weight: 20
-menu:
-  main:
-    weight: 1
 type: docs
 ---
 
