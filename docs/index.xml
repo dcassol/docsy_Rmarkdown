@@ -1919,6 +1919,16 @@ git submodule update --init --recursive
 e.g. &lt;code&gt;git commit -m &amp;quot;blabla pg_build&amp;quot;&lt;/code&gt;. This will run the full rendering process (rendering and deploy the website may still take a few minutes).&lt;/li&gt;
 &lt;li&gt;If you have build the site locally and updated the &lt;code&gt;/public&lt;/code&gt; locally, in your commit message, include the word &amp;ldquo;&lt;strong&gt;no_render&lt;/strong&gt;&amp;rdquo; will skip the site rendering + build process. Github Actions will directly use &lt;code&gt;/public&lt;/code&gt; to host the website.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h4 id=&#34;6-add-cname-file-cname&#34;&gt;6. Add CNAME file cname&lt;/h4&gt;
+&lt;p&gt;If the webpage requires CNAME file, we can set the &lt;code&gt;cname&lt;/code&gt; option in the &lt;code&gt;.github/workflows/build_page.yaml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;For more details about CNAME, read the official documentation: &lt;a href=&#34;https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site&#34;&gt;Managing a custom domain for your GitHub Pages site - GitHub Help&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- name: Deploy
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    github_token: ${{ secrets.GITHUB_TOKEN }}
+    publish_dir: ./public
+    cname: &amp;lt;add CNAME&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h4 id=&#34;details&#34;&gt;Details&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;The first deployment can take some time because Github Actions need to install these packages.

@@ -22,12 +22,12 @@
 1. Add all R and system packages to /deps.yaml file that are required to render your Rmarkdown files  Specify any CRAN, Bioconductor or Github packages you have used, in yaml array format. Github packages need to be user_name/repo_name. The site building is happening on Github by an Ubuntu system, so specify any system packages to install that are required by your R packages." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/rmarkdown/deploy/" />
-<meta property="article:modified_time" content="2021-02-04T18:54:40-08:00" /><meta property="og:site_name" content="Goldydocs" />
+<meta property="article:modified_time" content="2021-02-04T19:39:28-08:00" /><meta property="og:site_name" content="Goldydocs" />
 <meta itemprop="name" content="Deploy">
 <meta itemprop="description" content="Deploy to GitHub Pages Key feature: Fully automatic, no need to build website locally. Yes, you can skip blogdown::build_site() step locally.
 1. Add all R and system packages to /deps.yaml file that are required to render your Rmarkdown files  Specify any CRAN, Bioconductor or Github packages you have used, in yaml array format. Github packages need to be user_name/repo_name. The site building is happening on Github by an Ubuntu system, so specify any system packages to install that are required by your R packages.">
-<meta itemprop="dateModified" content="2021-02-04T18:54:40-08:00" />
-<meta itemprop="wordCount" content="592">
+<meta itemprop="dateModified" content="2021-02-04T19:39:28-08:00" />
+<meta itemprop="wordCount" content="648">
 
 
 
@@ -130,11 +130,23 @@ if (!doNotTrack) {
 				
 				
           <a class="nav-link dropdown-toggle" href="../../rmarkdown/" id="navbarDropdown" role="button">
-          	Rmarkdown
+          	Docsy &#43; Rmd
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           	
-          	  <a class="dropdown-item" href="../../rmarkdown/examples/example_rmd">Basic Example</a>
+          	  <a class="dropdown-item" href="../../rmarkdown/install/">Installation</a>
+          	
+          	  <a class="dropdown-item" href="../../rmarkdown/newcontent/">New Content</a>
+          	
+          	  <a class="dropdown-item" href="../../rmarkdown/deploy/">Deploy</a>
+          	
+          	  <a class="dropdown-item" href="../../rmarkdown/new_features">New Features</a>
+          	
+          	  <a class="dropdown-item" href="../../rmarkdown/commonproblems">Common Problems</a>
+          	
+          	  <a class="dropdown-item" href="../../rmarkdown/other">Other Details</a>
+          	
+          	  <a class="dropdown-item" href="../../rmarkdown/examples">Rmd Examples</a>
           	
           </div>
 				
@@ -148,7 +160,7 @@ if (!doNotTrack) {
 				
 				
 				
-					<a class="nav-link" href="../../blog/" ><span>About</span></a>
+					<a class="nav-link" href="../../about/" ><span>About</span></a>
 				
 			</li>
 			
@@ -158,13 +170,11 @@ if (!doNotTrack) {
 				
 				
 				
-					<a class="nav-link" href="../../community/" ><span>Blog</span></a>
+					<a class="nav-link" href="../../blog/" ><span>Blog</span></a>
 				
 			</li>
 			
 			<li class="nav-item mr-4 mb-2 mb-lg-0" style="position: relative">
-				
-				
 				
 				
 				
@@ -397,6 +407,7 @@ if (!doNotTrack) {
             <li><a href="#3-create-a-new-branch-named-gh-pages">3. Create a new branch named <code>gh-pages</code></a></li>
             <li><a href="#4-github-setting">4. Github Setting</a></li>
             <li><a href="#5-trigger-page-build">5. Trigger page build</a></li>
+            <li><a href="#6-add-cname-file-cname">6. Add CNAME file cname</a></li>
             <li><a href="#details">Details</a></li>
           </ul>
         </li>
@@ -447,7 +458,7 @@ if (!doNotTrack) {
 	<h1>Deploy</h1>
     
 	
-        <p class="reading-time"><i class="fa fa-clock" aria-hidden="true"></i> 3 minute read</p>
+        <p class="reading-time"><i class="fa fa-clock" aria-hidden="true"></i> 4 minute read</p>
            
 	<h3 id="deploy-to-github-pages">Deploy to GitHub Pages</h3>
 <p>Key feature: Fully automatic, <strong>no need to build website locally</strong>. Yes, you can skip <code>blogdown::build_site()</code> step locally.</p>
@@ -486,6 +497,16 @@ git submodule update --init --recursive
 e.g. <code>git commit -m &quot;blabla pg_build&quot;</code>. This will run the full rendering process (rendering and deploy the website may still take a few minutes).</li>
 <li>If you have build the site locally and updated the <code>/public</code> locally, in your commit message, include the word &ldquo;<strong>no_render</strong>&rdquo; will skip the site rendering + build process. Github Actions will directly use <code>/public</code> to host the website.</li>
 </ul>
+<h4 id="6-add-cname-file-cname">6. Add CNAME file cname</h4>
+<p>If the webpage requires CNAME file, we can set the <code>cname</code> option in the <code>.github/workflows/build_page.yaml</code>.</p>
+<p>For more details about CNAME, read the official documentation: <a href="https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site">Managing a custom domain for your GitHub Pages site - GitHub Help</a>.</p>
+<pre><code>- name: Deploy
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    github_token: ${{ secrets.GITHUB_TOKEN }}
+    publish_dir: ./public
+    cname: &lt;add CNAME&gt;
+</code></pre>
 <h4 id="details">Details</h4>
 <ul>
 <li>The first deployment can take some time because Github Actions need to install these packages.
@@ -598,7 +619,7 @@ Add your own status badge
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 2021-02-04: <a  href="https://github.com/dcassol/docsy_Rmarkdown/commit/66302e1a4779b48a877e897325623c1021fe7640">pg_build (66302e1)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 2021-02-04: <a  href="https://github.com/dcassol/docsy_Rmarkdown/commit/21bcf01a76c3fe8c81ec323ab710ff6cff2d172a">pg_build (21bcf01)</a>
 </div>
 </div>
 
