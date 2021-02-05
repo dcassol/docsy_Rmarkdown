@@ -19,8 +19,8 @@ Key feature: Fully automatic, **no need to build website locally**. Yes, you can
 Change your `baseURL` in the `/config.toml`. 
 
 * If this is your first github website, change the baseURL = "/" to your github base `url`, like "`https://USERNAME.github.io/`".
-* If not, baseURL = "/" to your repo's url, like "`https://USERNAME.github.io/REPO_NAME/`".
-* If you use custom domain, baseURL = "/" to your custom url, like "`https://MY_DOMAIN_NAME.com/`".
+* If not, change baseURL = "/" to your repo's url, like "`https://USERNAME.github.io/REPO_NAME/`".
+* If you use custom domain, change baseURL = "/" to your custom url, like "`https://MY_DOMAIN_NAME.com/`".
 
 #### 3. Create a new branch named `gh-pages`
 

@@ -23,5 +23,6 @@ This is the Hugo [Docsy theme](https://github.com/google/docsy) combining {[blog
 4. Show/hide sidebars toggle
 5. Automatic deployment to Github pages or Netlify
 6. Hide document before the specified date
+7. Table of content highlighting
 
 Tutorial section.

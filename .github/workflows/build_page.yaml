@@ -42,8 +42,8 @@ jobs:
           Rscript -e 'writeLines(as.character(Sys.time()), "blogdown/timestamp.txt")'
       - name: Update github
         run: |
-          git config --local user.name "dcassol"
-          git config --local user.email "danicassol@gmail.com"
+          git config --local user.name "Page Build Bot"
+          git config --local user.email "gh-action-bot@protonmail.com"
           git add -A
           git commit -m "Bot update public and md5sum table" -a
       - name: Push changes

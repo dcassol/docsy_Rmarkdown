@@ -7,6 +7,9 @@ type: docs
 weight: 5
 ---
 
+New features we have added along with the R markdown support. These new features
+do not exist in original doscy theme.
+
 ## R code highlighting
 
 R code highlighting is done by [prism.js](https://prismjs.com/index.html). Simply 
@@ -37,7 +40,7 @@ In markdown:
     1 + 1
     ```
 
-which is the same, but code will never be evaluated in simple markdowns
+which is the same, but code will not be evaluated in simple markdowns
 ```r
 1 + 1
 ```
@@ -98,48 +101,58 @@ before a specific date. We have added this support:
 1. In your markdown/ R markdown header, add `visibleDate` date entry and specify 
 a date in **_ISO 8601_** format: `YYYY-MM-DD HH:MM:SS`, for example 
 
-```
----
-title: "Overview"
-linkTitle: "Overview"
-weight: 1
-visibleDate: "2021-02-01"
----
-```
+    ```
+    ---
+    title: "Overview"
+    linkTitle: "Overview"
+    weight: 1
+    visibleDate: "2021-02-01"
+    ---
+    ```
 
-The document will **not be visible before February 1st, year 2021**. Hour, minute, second
-are optional. 
+    The document will **not be visible before February 1st, year 2021**. Hour, minute, second
+    are optional. 
 
-Note: hours are in 24 hour format. Hour, minute, second must be provided all together, 
-providing a single, or two of them will not work.
-
+    Note: hours are in 24 hour format. Hour, minute, second must be provided all together, 
+    providing a single, or two of them will not work.
+    
     - `YYYY-MM-DD HH` not work
     - `YYYY-MM-DD HH:SS` not work
     - `YYYY-MM-DD SS` not work
     - `YYYY-MM-DD HH:MM:SS` work!
 
 2. Go to `/config.toml` change `serverTimeLocation` your server time zone location
-Change it to the time zone location of **where your website rendering server** (where do you run `blogdown::build_site()`).
+Change it to the time zone location of where your website rendering server (**where do you run `blogdown::build_site()`**).
 If you are running locally, this time location will be the same as your local time, 
 if you are using github actions, this time is the github server time location.
 
-If not provided, UTC time is used.
+    If not provided, UTC time is used.
 
 3. In `/config.toml` specify `visHideMethod`, one of "soft" or "hard"
 How to hide the content before the visible date.
 
     - **soft**: default if not provided, use javascript to remove content.
     
-      **The whole content is still sent to readers**, we just did some tricks to remove the
-      content is post-processing. If some browsers block javascript, some content may 
+      **The whole content is still sent to readers**, we use client-end javascript to remove the
+      content in post-processing. If some browsers block javascript, some content may 
       leak to reader. However, you do not need to rebuild the site after the visible date.
       Content will **automatically become visible** for readers.
       
-    - **hard**: remove content is removed during markdown to HTML generation. 
+    - **hard**: Content is removed during markdown/Rmarkdown to HTML generation. 
       
-      **Whole content will not sent to readers**. However, you need to rebuild  + redeploy the site 
+      **Whole content will not be sent to readers**. However, you need to rebuild  + redeploy the site 
       after the visible date. Content will **NOT automatically become visible** for readers.
 
 We recommend to use "soft" for non-top secrets, like normal documents for a tool. 
-For site with sensitive content like homework solutions, "hard" may be better. 
+For site with sensitive content like exam solutions, "hard" may be better. 
+
+
+## Table of content highlighting and scrolling
+
+Right side table of content (TOC) bar will be automatically highlighted for readers current
+visible sections titles. This is a good indicator to show where the users are.
+
+If the TOC is too long, when readers scroll the page, TOC bar will automatically scroll
+as well. 
+
 

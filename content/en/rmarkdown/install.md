@@ -20,21 +20,9 @@ type: docs
 * Copy the URL `https://github.com/<username>/<repository_name>.git`
 * Open terminal 
 
-```
+```bash
 git clone --recurse-submodules --depth 1 https://github.com/<username>/<repository_name>.git
 cd <repository_name>
-```
-
-* Run the website locally
-
-```
-hugo server
-```
-
-* Run the website locally with `blogdown`
-
-```r
-blogdown::serve_site()
 ```
 
 ## Prerequisites and Installation
@@ -70,6 +58,7 @@ For `Windows` and `macOS` please see instructions [here](https://www.docsy.dev/d
 
 #### Install PostCSS
 
+[Download `node` and `npm`](https://nodejs.org/en/download/) if you do not have.
 
 To build or update your site's CSS resources, you also need `PostCSS` to create the final assets. If you need to install it, you must have a recent version of `NodeJS` installed on your machine so you can use `npm`, the Node package manager. By default `npm` installs tools under the directory where you run `npm` install:
 
@@ -87,9 +76,9 @@ npm audit fix
 
 ### Run the website locally 
 
-#### with {blogdown}
+#### with {blogdown} (**Recommended**)
 
-* Open R in console or Rstudio
+* Open R in console or Rstudio 
 
 This repo contains a `.Rprofile` file that will automatically serve the site
 for you R starting directory is this newly cloned repository. Otherwise, 
@@ -101,9 +90,9 @@ blogdown::serve_site()
 
 You should see a website is opened in your local browser or Rstudio viewer.
 
-#### Run the website locally on the terminal
+#### Run the website locally in the terminal
 
 ```bash
 cd YOUR_NEW_REPO_PATH
-hugo server
+hugo serve -b "http://localhost" 
 ```
