@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.79.0" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.80.0" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="../../favicons/favicon.ico" >
@@ -24,14 +24,14 @@ Workf with R markdown One example Rmarkdown file, /content/en/rmarkdown/examples
   Change _/content/en/index.html for the homepage." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/rmarkdown/newcontent/" />
-<meta property="article:modified_time" content="2021-02-05T04:08:23+00:00" /><meta property="og:site_name" content="Goldydocs" />
+<meta property="article:modified_time" content="2021-02-08T17:43:15-08:00" /><meta property="og:site_name" content="Goldydocs" />
 <meta itemprop="name" content="Add new content">
 <meta itemprop="description" content="Create your website content This Docsy Template Project uses the Docsy theme, and we have provided a skeleton documentation structure for you to use when you clone the repo. The full documentation can be found here.
 Workf with R markdown One example Rmarkdown file, /content/en/rmarkdown/examples/example.Rmarkdown is also included in the skeleton.
   To modify website content, after running blogdown::serve_site(), change files in /content/en directory.
   Change _/content/en/index.html for the homepage.">
-<meta itemprop="dateModified" content="2021-02-05T04:08:23+00:00" />
-<meta itemprop="wordCount" content="336">
+<meta itemprop="dateModified" content="2021-02-08T17:43:15-08:00" />
+<meta itemprop="wordCount" content="412">
 
 
 
@@ -205,7 +205,7 @@ if (!doNotTrack) {
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="../../offline-search-index.9db3fe95e115022f176a6a9e329f8242.json"
+  data-offline-search-index-json-src="../../offline-search-index.471cf158856991a5ed3a3bd6afe7c9ab.json"
   data-offline-search-base-href="../../"
   data-offline-search-max-results="10"
 >
@@ -237,7 +237,7 @@ if (!doNotTrack) {
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="../../offline-search-index.9db3fe95e115022f176a6a9e329f8242.json"
+  data-offline-search-index-json-src="../../offline-search-index.471cf158856991a5ed3a3bd6afe7c9ab.json"
   data-offline-search-base-href="../../"
   data-offline-search-max-results="10"
 >
@@ -433,6 +433,10 @@ if (!doNotTrack) {
     <li><a href="#create-your-website-content">Create your website content</a>
       <ul>
         <li><a href="#workf-with-r-markdown">Workf with R markdown</a></li>
+      </ul>
+    </li>
+    <li><a href="#pages-types">Pages Types</a>
+      <ul>
         <li><a href="#other-content">Other Content</a></li>
       </ul>
     </li>
@@ -490,23 +494,26 @@ if (!doNotTrack) {
 <p>Change <strong>_/content/en/<em>index.html</em></strong> for the homepage.</p>
 </li>
 <li>
-<p>Add your markdown/ R markdown files inside the <code>/content/en</code> folder.</p>
+<p>Add your <code>markdown</code> or <code>Rmarkdown</code> files inside the <code>/content/en</code> folder.</p>
 </li>
 <li>
 <blockquote>
-<p><strong><em>Important:</em></strong> To work with the RMarkdown files, change file extension from <code>.Rmd</code> to <code>.Rmarkdown</code> extension, e.g. <code>tutorial.Rmakdown</code>.
+<p><strong><em>Important:</em></strong> To work with the <code>RMarkdown</code> files, change file extension from <code>.Rmd</code> to <code>.Rmarkdown</code> extension, e.g. <code>tutorial.Rmakdown</code>.
 The <code>.Rmd</code> files may still work but one of the issues includes lack of R code highlighting.</p>
 </blockquote>
 </li>
 <li>
-<p>When you are writing the Rmarkdown files, a good practice is to only use one level 1 heading (&quot;#&quot;). This theme has already
-created a H1 for you which is the main title, so try to aviod the H1 heading in other part of the document. By default, this template assumes you are not
-using other H1 headings and the table of content (TOC) starts with H2, and other additional H1 heading will be displayed in main text
-but will <strong>not show up on the TOC</strong>. If you wish to start with H1 on your TOC, change <code>[markup.tableOfContents]</code> in <code>/config.toml</code>.</p>
+<p>When you are writing the Rmarkdown files, a good practice is to only use one
+level 1 heading (&quot;#&quot;). This theme has already created a H1 for you which is the
+main title, so try to aviod the H1 heading in other part of the document. By
+default, this template assumes you are not using other H1 headings and the table
+of content (TOC) starts with H2, and other additional H1 heading will be displayed
+in main text but will <strong>not show up on the TOC</strong>. If you wish to start with H1 on your TOC, change <code>[markup.tableOfContents]</code> in <code>/config.toml</code>.</p>
 </li>
 <li>
-<p>When you save your modified Rmarkdown files, {blogdown} will automatically render the file to <code>.markdown</code> extension. This
-new <code>.markdown</code> will be used by Hugo to generate HTML. Usually you do not manually edit <code>.markdown</code> files.</p>
+<p>When you save your modified Rmarkdown files, {<code>blogdown</code>} will automatically
+render the file to <code>.markdown</code> extension. This new <code>.markdown</code> will be used by
+Hugo to generate HTML. Usually you do not manually edit <code>.markdown</code> files.</p>
 </li>
 <li>
 <p>After the <code>.markdown</code> generation, changes will be reflected in the local browser in a second.</p>
@@ -515,6 +522,23 @@ new <code>.markdown</code> will be used by Hugo to generate HTML. Usually you do
 <p>Before building the website, check out docs for <a href="../../rmarkdown/new_features/">new features</a>.</p>
 </li>
 </ol>
+<h2 id="pages-types">Pages Types</h2>
+<p>Because most technical documentation sites have different sections for different types of content, the Docsy theme comes with the following templates for top-level site sections that you might need:</p>
+<ul>
+<li><code>docs</code> is for pages in your site&rsquo;s Documentation section.</li>
+<li><code>blog</code> is for pages in your site&rsquo;s Blog.</li>
+<li><code>community</code> is for your site&rsquo;s Community page.</li>
+</ul>
+<p>For the new Rmarkdown, it is necessary to specify the content page type:</p>
+<pre><code>---
+title: &quot;New Rmarkdown&quot;
+author: &quot;&lt;Author&gt;&quot;
+date: &quot;02/07/2021&quot;
+output: html_document
+type: docs
+weight: 5
+---
+</code></pre>
 <h3 id="other-content">Other Content</h3>
 <ul>
 <li>
@@ -533,14 +557,6 @@ new <code>.markdown</code> will be used by Hugo to generate HTML. Usually you do
 </code></pre>
 <p>All website content is in the <code>/public</code> folder. Only this folder is required to publish your website.</p>
 <p>Read <a href="../../rmarkdown/deploy">deploy</a> for some convenient ways we provide to publish the website.</p>
-<details>
-<summary><b>
-ToDo
-</b></summary
-<ul>
-<li>Add documentation for the custom configuration.</li>
-</ul>
-</details>
 
 	
 		<style>
@@ -606,7 +622,7 @@ ToDo
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 2021-02-05: <a  href="https://github.com/dcassol/docsy_Rmarkdown/commit/df2751db227ffde498a226f87a6790434c76a028">Bot update public and md5sum table (df2751d)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 2021-02-08: <a  href="https://github.com/dcassol/docsy_Rmarkdown/commit/13f27abee6e341afd2879a40094ca61e39217145">pg_build (13f27ab)</a>
 </div>
 </div>
 
