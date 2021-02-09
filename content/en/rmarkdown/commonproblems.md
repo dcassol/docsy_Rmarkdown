@@ -24,7 +24,16 @@ cd YOUR_REPO
 git submodule update --init --recursive
 ```
 
-### 3. Rmarkdown rendering
+### 3.  During site building: 
+
+`Error: Error building site: POSTCSS: failed to transform "scss/main.css" (text/css): internal/modules/cjs/loader.js:883`
+
+```r
+sudo npm i fsevents@latest -f --save-optional
+sudo npm i postcss@latest -f
+```
+
+### 4. Rmarkdown rendering
 
 ```r
 The extension tex_math_dollars is not supported for gfm
