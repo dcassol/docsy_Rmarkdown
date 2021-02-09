@@ -1182,23 +1182,26 @@ visibleDate: &amp;quot;2121-02-01&amp;quot;
 &lt;p&gt;Change &lt;strong&gt;_/content/en/&lt;em&gt;index.html&lt;/em&gt;&lt;/strong&gt; for the homepage.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Add your markdown/ R markdown files inside the &lt;code&gt;/content/en&lt;/code&gt; folder.&lt;/p&gt;
+&lt;p&gt;Add your &lt;code&gt;markdown&lt;/code&gt; or &lt;code&gt;Rmarkdown&lt;/code&gt; files inside the &lt;code&gt;/content/en&lt;/code&gt; folder.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Important:&lt;/em&gt;&lt;/strong&gt; To work with the RMarkdown files, change file extension from &lt;code&gt;.Rmd&lt;/code&gt; to &lt;code&gt;.Rmarkdown&lt;/code&gt; extension, e.g. &lt;code&gt;tutorial.Rmakdown&lt;/code&gt;.
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Important:&lt;/em&gt;&lt;/strong&gt; To work with the &lt;code&gt;RMarkdown&lt;/code&gt; files, change file extension from &lt;code&gt;.Rmd&lt;/code&gt; to &lt;code&gt;.Rmarkdown&lt;/code&gt; extension, e.g. &lt;code&gt;tutorial.Rmakdown&lt;/code&gt;.
 The &lt;code&gt;.Rmd&lt;/code&gt; files may still work but one of the issues includes lack of R code highlighting.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;When you are writing the Rmarkdown files, a good practice is to only use one level 1 heading (&amp;quot;#&amp;quot;). This theme has already
-created a H1 for you which is the main title, so try to aviod the H1 heading in other part of the document. By default, this template assumes you are not
-using other H1 headings and the table of content (TOC) starts with H2, and other additional H1 heading will be displayed in main text
-but will &lt;strong&gt;not show up on the TOC&lt;/strong&gt;. If you wish to start with H1 on your TOC, change &lt;code&gt;[markup.tableOfContents]&lt;/code&gt; in &lt;code&gt;/config.toml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;When you are writing the Rmarkdown files, a good practice is to only use one
+level 1 heading (&amp;quot;#&amp;quot;). This theme has already created a H1 for you which is the
+main title, so try to aviod the H1 heading in other part of the document. By
+default, this template assumes you are not using other H1 headings and the table
+of content (TOC) starts with H2, and other additional H1 heading will be displayed
+in main text but will &lt;strong&gt;not show up on the TOC&lt;/strong&gt;. If you wish to start with H1 on your TOC, change &lt;code&gt;[markup.tableOfContents]&lt;/code&gt; in &lt;code&gt;/config.toml&lt;/code&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;When you save your modified Rmarkdown files, {blogdown} will automatically render the file to &lt;code&gt;.markdown&lt;/code&gt; extension. This
-new &lt;code&gt;.markdown&lt;/code&gt; will be used by Hugo to generate HTML. Usually you do not manually edit &lt;code&gt;.markdown&lt;/code&gt; files.&lt;/p&gt;
+&lt;p&gt;When you save your modified Rmarkdown files, {&lt;code&gt;blogdown&lt;/code&gt;} will automatically
+render the file to &lt;code&gt;.markdown&lt;/code&gt; extension. This new &lt;code&gt;.markdown&lt;/code&gt; will be used by
+Hugo to generate HTML. Usually you do not manually edit &lt;code&gt;.markdown&lt;/code&gt; files.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;After the &lt;code&gt;.markdown&lt;/code&gt; generation, changes will be reflected in the local browser in a second.&lt;/p&gt;
@@ -1207,6 +1210,23 @@ new &lt;code&gt;.markdown&lt;/code&gt; will be used by Hugo to generate HTML. Us
 &lt;p&gt;Before building the website, check out docs for &lt;a href=&#34;../rmarkdown/new_features/&#34;&gt;new features&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;h2 id=&#34;pages-types&#34;&gt;Pages Types&lt;/h2&gt;
+&lt;p&gt;Because most technical documentation sites have different sections for different types of content, the Docsy theme comes with the following templates for top-level site sections that you might need:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;docs&lt;/code&gt; is for pages in your site&amp;rsquo;s Documentation section.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;blog&lt;/code&gt; is for pages in your site&amp;rsquo;s Blog.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;community&lt;/code&gt; is for your site&amp;rsquo;s Community page.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For the new Rmarkdown, it is necessary to specify the content page type:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: &amp;quot;New Rmarkdown&amp;quot;
+author: &amp;quot;&amp;lt;Author&amp;gt;&amp;quot;
+date: &amp;quot;02/07/2021&amp;quot;
+output: html_document
+type: docs
+weight: 5
+---
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;other-content&#34;&gt;Other Content&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -1225,14 +1245,6 @@ new &lt;code&gt;.markdown&lt;/code&gt; will be used by Hugo to generate HTML. Us
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;All website content is in the &lt;code&gt;/public&lt;/code&gt; folder. Only this folder is required to publish your website.&lt;/p&gt;
 &lt;p&gt;Read &lt;a href=&#34;../rmarkdown/deploy&#34;&gt;deploy&lt;/a&gt; for some convenient ways we provide to publish the website.&lt;/p&gt;
-&lt;details&gt;
-&lt;summary&gt;&lt;b&gt;
-ToDo
-&lt;/b&gt;&lt;/summary
-&lt;ul&gt;
-&lt;li&gt;Add documentation for the custom configuration.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/details&gt;
 
       </description>
     </item>
@@ -1919,6 +1931,16 @@ git submodule update --init --recursive
 e.g. &lt;code&gt;git commit -m &amp;quot;blabla pg_build&amp;quot;&lt;/code&gt;. This will run the full rendering process (rendering and deploy the website may still take a few minutes).&lt;/li&gt;
 &lt;li&gt;If you have build the site locally and updated the &lt;code&gt;/public&lt;/code&gt; locally, in your commit message, include the word &amp;ldquo;&lt;strong&gt;no_render&lt;/strong&gt;&amp;rdquo; will skip the site rendering + build process. Github Actions will directly use &lt;code&gt;/public&lt;/code&gt; to host the website.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h4 id=&#34;6-add-cname-file-cname&#34;&gt;6. Add CNAME file cname&lt;/h4&gt;
+&lt;p&gt;If the webpage requires CNAME file, we can set the &lt;code&gt;cname&lt;/code&gt; option in the &lt;code&gt;.github/workflows/build_page.yaml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;For more details about CNAME, read the official documentation: &lt;a href=&#34;https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site&#34;&gt;Managing a custom domain for your GitHub Pages site - GitHub Help&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- name: Deploy
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    github_token: ${{ secrets.GITHUB_TOKEN }}
+    publish_dir: ./public
+    cname: &amp;lt;add CNAME&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h4 id=&#34;details&#34;&gt;Details&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;The first deployment can take some time because Github Actions need to install these packages.
