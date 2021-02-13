@@ -2,6 +2,12 @@ on:
   push:
      branches:
        - main
+  workflow_dispatch:
+    inputs:
+      update_ref:
+        description: 'Update Reference triggered pg build'
+        required: false
+        default: 'false'
 
 name: build_and_deploy_gh_pages
 
@@ -17,11 +23,14 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: install node pkgs
-        run: |
-          npm install -g postcss-cli
-          npm install autoprefixer
-          npm audit fix
+      - name: Cache node dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            node-
+      - run: npm ci
       - uses: r-lib/actions/setup-r@v1
       - uses: r-lib/actions/setup-pandoc@v1
       - name: Cache R packages
@@ -42,8 +51,8 @@ jobs:
           Rscript -e 'writeLines(as.character(Sys.time()), "blogdown/timestamp.txt")'
       - name: Update github
         run: |
-          git config --local user.name "Page Build Bot"
-          git config --local user.email "gh-action-bot@protonmail.com"
+          git config --local user.name "dcassol"
+          git config --local user.email "danicassol@gmail.com"
           git add -A
           git commit -m "Bot update public and md5sum table" -a
       - name: Push changes
@@ -56,6 +65,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          cname: systempipe.org
   ph-pages:
     name: gh_pages_only
     if: "contains(toJSON(github.event.commits.*.message), 'no_render')"
@@ -67,3 +77,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          cname: systempipe.org
