@@ -229,51 +229,65 @@ enable = true
   name = "Documentation"
   weight = 1
   url = "/docs/"
-[[menu.main]]
-  name = "Full Documentation"
-  url = "https://www.docsy.dev/docs/"
-  parent = "Documentation"
-  weight = 1
+  [[menu.main]]
+    name = "First level"
+    url = "https://www.docsy.dev/docs/"
+    parent = "Documentation"
+    weight = 1
+  [[menu.main]]
+    name = "Second level"
+    url = "https://www.docsy.dev/docs/"
+    parent = "Documentation"
+    weight = 2
+    [menu.main.params]
+      level = 2
+  [[menu.main]]
+    name = "Third level"
+    url = "https://www.docsy.dev/docs/"
+    parent = "Documentation"
+    weight = 2
+    [menu.main.params]
+      level = 3
 ##
 [[menu.main]]
   name = "Docsy + Rmd"
   weight = 2
   url = "/rmarkdown/"
-[[menu.main]]
-  name = "Installation"
-  url = "/rmarkdown/install/"
-  parent = "Docsy + Rmd"
-  weight = 1
-[[menu.main]]
-  name = "New Content"
-  url = "/rmarkdown/newcontent/"
-  parent = "Docsy + Rmd"
-  weight = 2
-[[menu.main]]
-  name = "Deploy"
-  url = "/rmarkdown/deploy/"
-  parent = "Docsy + Rmd"
-  weight = 3
-[[menu.main]]
-  name = "New Features"
-  url = "/rmarkdown/new_features"
-  parent = "Docsy + Rmd"
-  weight = 4
-[[menu.main]]
-  name = "Common Problems"
-  url = "/rmarkdown/commonproblems"
-  parent = "Docsy + Rmd"
-  weight = 5
-[[menu.main]]
-  name = "Other Details"
-  url = "/rmarkdown/other"
-  parent = "Docsy + Rmd"
-  weight = 6
-[[menu.main]]
-  name = "Rmd Examples"
-  url = "/rmarkdown/examples"
-  parent = "Docsy + Rmd"
-  weight = 7
+  [[menu.main]]
+    name = "Installation"
+    url = "/rmarkdown/install/"
+    parent = "Docsy + Rmd"
+    weight = 1
+  [[menu.main]]
+    name = "New Content"
+    url = "/rmarkdown/newcontent/"
+    parent = "Docsy + Rmd"
+    weight = 2
+  [[menu.main]]
+    name = "Deploy"
+    url = "/rmarkdown/deploy/"
+    parent = "Docsy + Rmd"
+    weight = 3
+  [[menu.main]]
+    name = "New Features"
+    url = "/rmarkdown/new_features"
+    parent = "Docsy + Rmd"
+    weight = 4
+  [[menu.main]]
+    name = "Common Problems"
+    url = "/rmarkdown/commonproblems"
+    parent = "Docsy + Rmd"
+    weight = 5
+  [[menu.main]]
+    name = "Other Details"
+    url = "/rmarkdown/other"
+    parent = "Docsy + Rmd"
+    weight = 6
+  [[menu.main]]
+    name = "Rmd Examples"
+    url = "/rmarkdown/examples"
+    parent = "Docsy + Rmd"
+    weight = 7
 ##
 [[menu.main]]
   name = "About"
