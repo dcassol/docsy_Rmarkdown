@@ -222,7 +222,6 @@ enable = true
 	icon = "fa fa-envelope"
         desc = "Discuss development issues around the project"
 
-
 # Top-level navigation (horizontal)
 ##
 [[menu.main]]
