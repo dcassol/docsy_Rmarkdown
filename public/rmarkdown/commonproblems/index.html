@@ -31,7 +31,7 @@ cd YOUR_REPO npm audit fix  More information
 2. During site building: Error: Error building site: &quot;~/content/en/_index.html:6:1&quot;: failed to extract shortcode: template for shortcode &quot;blocks/cover&quot; not found.
 cd YOUR_REPO git submodule update --init --recursive  3. During site building: Error: Error building site: POSTCSS: failed to transform &quot;scss/main.css&quot; (text/css): internal/modules/cjs/loader.js:883">
 <meta itemprop="dateModified" content="2021-02-08T18:34:04-08:00" />
-<meta itemprop="wordCount" content="149">
+<meta itemprop="wordCount" content="221">
 
 
 
@@ -269,7 +269,7 @@ if (!doNotTrack) {
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="../../offline-search-index.cba4b3505e09975c8f00b6474fbb0593.json"
+  data-offline-search-index-json-src="../../offline-search-index.4beebe60865d0c1f4c7394ccf0d15b55.json"
   data-offline-search-base-href="../../"
   data-offline-search-max-results="10"
 >
@@ -301,7 +301,7 @@ if (!doNotTrack) {
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="../../offline-search-index.cba4b3505e09975c8f00b6474fbb0593.json"
+  data-offline-search-index-json-src="../../offline-search-index.4beebe60865d0c1f4c7394ccf0d15b55.json"
   data-offline-search-base-href="../../"
   data-offline-search-max-results="10"
 >
@@ -500,6 +500,7 @@ if (!doNotTrack) {
         <li><a href="#2-during-site-building">2. During site building:</a></li>
         <li><a href="#3--during-site-building">3.  During site building:</a></li>
         <li><a href="#4-rmarkdown-rendering">4. Rmarkdown rendering</a></li>
+        <li><a href="#5-home-page-background-image">5. Home page background image</a></li>
       </ul>
     </li>
   </ul>
@@ -541,7 +542,7 @@ if (!doNotTrack) {
 	<h1>Common Problems</h1>
     
 	
-        <p class="reading-time"><i class="fa fa-clock" aria-hidden="true"></i> 1 minute read</p>
+        <p class="reading-time"><i class="fa fa-clock" aria-hidden="true"></i> 2 minute read</p>
            
 	<h3 id="1-during-site-building">1. During site building:</h3>
 <p><code>Error: Error building site: POSTCSS: failed to transform &quot;scss/main.css&quot; (text/css):resource &quot;scss/scss/main.scss_4853eb546e7a6c0898ed71feae7357c0&quot; not found in file cache</code>.</p>
@@ -568,6 +569,13 @@ Error : Failed to render content/en/docs/test.Rmarkdown
 <p>Update pandoc &gt;= 2.12 solves the problem. Use <code>rmarkdown::pandoc_version()</code> to check version.</p>
 <p>If you use Rstudio, simply update Rstudio to the latest version which comes with pandoc &gt;= 2.12 and
 rmarkdown will use it automatically. Otherwise, you need to <a href="https://pandoc.org/installing.html">update pandoc</a> by yourself.</p>
+<h3 id="5-home-page-background-image">5. Home page background image</h3>
+<p>If your <code>baseURL</code> is NOT &ldquo;/&rdquo;, the home page background image may not be displayed in deployment. This
+is a bug in the original &ldquo;docsy&rdquo; theme. To fix this, replace the <code>static/background.jpg</code> with your own but keep
+the same file name.</p>
+<p>If your <code>baseURL</code> is &ldquo;/&rdquo;, comment out or delete the <code>style</code> section on top of <code>/content/en/_index.html</code>,
+and follow the <a href="https://www.docsy.dev/docs/adding-content/iconsimages/#add-images">original document</a>
+to add the background image.</p>
 
 	
 		<style>

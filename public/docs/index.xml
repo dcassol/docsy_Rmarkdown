@@ -2939,6 +2939,31 @@ which the entry you want to attach to.&lt;/li&gt;
     parent = &amp;quot;Documentation&amp;quot;
     weight = 1
 &lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;dropdown-indentation&#34;&gt;Dropdown indentation&lt;/h3&gt;
+&lt;p&gt;If you wish to have some indentation in the dropdown menu, in &lt;code&gt;config.toml&lt;/code&gt;, write
+the &lt;code&gt;menu&lt;/code&gt; part as following:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[[menu.main]]
+  name = &amp;quot;Documentation&amp;quot;
+  weight = 1
+  url = &amp;quot;/docs/&amp;quot;
+  [[menu.main]]
+    name = &amp;quot;First level&amp;quot;
+    url = &amp;quot;https://www.docsy.dev/docs/&amp;quot;
+    parent = &amp;quot;Documentation&amp;quot;
+    weight = 1
+  [[menu.main]]
+    name = &amp;quot;Second level&amp;quot;
+    url = &amp;quot;https://www.docsy.dev/docs/&amp;quot;
+    parent = &amp;quot;Documentation&amp;quot;
+    weight = 2
+    [menu.main.params]
+      level = 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In addition to specify the &lt;code&gt;parent&lt;/code&gt; param, also attach the &lt;code&gt;level&lt;/code&gt; under &lt;code&gt;[menu.main.params]&lt;/code&gt;.
+The &lt;code&gt;level&lt;/code&gt; means indentation level. When not specified, it is the default 1. The value
+can be any float value between 0 and infinity. The indentation space is &lt;code&gt;level * 1rem&lt;/code&gt;.
+So you can do something like &lt;code&gt;level = 1.5&lt;/code&gt;. However, we encourage you to use integers than
+float numbers.&lt;/p&gt;
 &lt;h2 id=&#34;showhide-sidebars-toggle&#34;&gt;Show/hide sidebars toggle&lt;/h2&gt;
 &lt;p&gt;This feature is only available in document pages. 2 toggle buttons are on the
 top-right corner of the page. You can switch them off to hide left/right sidebars
@@ -3042,6 +3067,13 @@ Error : Failed to render content/en/docs/test.Rmarkdown
 &lt;p&gt;Update pandoc &amp;gt;= 2.12 solves the problem. Use &lt;code&gt;rmarkdown::pandoc_version()&lt;/code&gt; to check version.&lt;/p&gt;
 &lt;p&gt;If you use Rstudio, simply update Rstudio to the latest version which comes with pandoc &amp;gt;= 2.12 and
 rmarkdown will use it automatically. Otherwise, you need to &lt;a href=&#34;https://pandoc.org/installing.html&#34;&gt;update pandoc&lt;/a&gt; by yourself.&lt;/p&gt;
+&lt;h3 id=&#34;5-home-page-background-image&#34;&gt;5. Home page background image&lt;/h3&gt;
+&lt;p&gt;If your &lt;code&gt;baseURL&lt;/code&gt; is NOT &amp;ldquo;/&amp;rdquo;, the home page background image may not be displayed in deployment. This
+is a bug in the original &amp;ldquo;docsy&amp;rdquo; theme. To fix this, replace the &lt;code&gt;static/background.jpg&lt;/code&gt; with your own but keep
+the same file name.&lt;/p&gt;
+&lt;p&gt;If your &lt;code&gt;baseURL&lt;/code&gt; is &amp;ldquo;/&amp;rdquo;, comment out or delete the &lt;code&gt;style&lt;/code&gt; section on top of &lt;code&gt;/content/en/_index.html&lt;/code&gt;,
+and follow the &lt;a href=&#34;https://www.docsy.dev/docs/adding-content/iconsimages/#add-images&#34;&gt;original document&lt;/a&gt;
+to add the background image.&lt;/p&gt;
 
       </description>
     </item>

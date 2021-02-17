@@ -82,6 +82,36 @@ This website's documentation menu is created by this example:
     weight = 1
 ```
 
+### Dropdown indentation
+If you wish to have some indentation in the dropdown menu, in `config.toml`, write 
+the `menu` part as following:
+
+```toml
+[[menu.main]]
+  name = "Documentation"
+  weight = 1
+  url = "/docs/"
+  [[menu.main]]
+    name = "First level"
+    url = "https://www.docsy.dev/docs/"
+    parent = "Documentation"
+    weight = 1
+  [[menu.main]]
+    name = "Second level"
+    url = "https://www.docsy.dev/docs/"
+    parent = "Documentation"
+    weight = 2
+    [menu.main.params]
+      level = 2
+```
+
+In addition to specify the `parent` param, also attach the `level` under `[menu.main.params]`.
+The `level` means indentation level. When not specified, it is the default 1. The value 
+can be any float value between 0 and infinity. The indentation space is `level * 1rem`. 
+So you can do something like `level = 1.5`. However, we encourage you to use integers than 
+float numbers. 
+
+
 ##  Show/hide sidebars toggle
 
 This feature is only available in document pages. 2 toggle buttons are on the 
