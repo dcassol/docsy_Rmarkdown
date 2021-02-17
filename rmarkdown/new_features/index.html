@@ -35,7 +35,7 @@ In R markdown:
 1 &#43; 1  ## [1] 2  In markdown:
 ```r 1 &#43; 1 ```  which is the same, but code will not be evaluated in simple markdowns">
 <meta itemprop="dateModified" content="2021-02-05T04:08:23+00:00" />
-<meta itemprop="wordCount" content="664">
+<meta itemprop="wordCount" content="790">
 
 
 
@@ -275,7 +275,7 @@ if (!doNotTrack) {
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="../../offline-search-index.cba4b3505e09975c8f00b6474fbb0593.json"
+  data-offline-search-index-json-src="../../offline-search-index.4beebe60865d0c1f4c7394ccf0d15b55.json"
   data-offline-search-base-href="../../"
   data-offline-search-max-results="10"
 >
@@ -307,7 +307,7 @@ if (!doNotTrack) {
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="../../offline-search-index.cba4b3505e09975c8f00b6474fbb0593.json"
+  data-offline-search-index-json-src="../../offline-search-index.4beebe60865d0c1f4c7394ccf0d15b55.json"
   data-offline-search-base-href="../../"
   data-offline-search-max-results="10"
 >
@@ -502,7 +502,11 @@ if (!doNotTrack) {
   <ul>
     <li><a href="#r-code-highlighting">R code highlighting</a></li>
     <li><a href="#math-equations-mathjax">Math equations (Mathjax)</a></li>
-    <li><a href="#top-banner-navigation-dropdown-menu">Top banner navigation dropdown menu</a></li>
+    <li><a href="#top-banner-navigation-dropdown-menu">Top banner navigation dropdown menu</a>
+      <ul>
+        <li><a href="#dropdown-indentation">Dropdown indentation</a></li>
+      </ul>
+    </li>
     <li><a href="#showhide-sidebars-toggle">Show/hide sidebars toggle</a></li>
     <li><a href="#automatic-deployment-to-github-pages-or-netlify">Automatic deployment to Github pages or Netlify</a></li>
     <li><a href="#hide-document-before-the-specified-date">Hide document before the specified date</a></li>
@@ -605,6 +609,31 @@ which the entry you want to attach to.</li>
     parent = &quot;Documentation&quot;
     weight = 1
 </code></pre>
+<h3 id="dropdown-indentation">Dropdown indentation</h3>
+<p>If you wish to have some indentation in the dropdown menu, in <code>config.toml</code>, write
+the <code>menu</code> part as following:</p>
+<pre><code class="language-toml">[[menu.main]]
+  name = &quot;Documentation&quot;
+  weight = 1
+  url = &quot;/docs/&quot;
+  [[menu.main]]
+    name = &quot;First level&quot;
+    url = &quot;https://www.docsy.dev/docs/&quot;
+    parent = &quot;Documentation&quot;
+    weight = 1
+  [[menu.main]]
+    name = &quot;Second level&quot;
+    url = &quot;https://www.docsy.dev/docs/&quot;
+    parent = &quot;Documentation&quot;
+    weight = 2
+    [menu.main.params]
+      level = 2
+</code></pre>
+<p>In addition to specify the <code>parent</code> param, also attach the <code>level</code> under <code>[menu.main.params]</code>.
+The <code>level</code> means indentation level. When not specified, it is the default 1. The value
+can be any float value between 0 and infinity. The indentation space is <code>level * 1rem</code>.
+So you can do something like <code>level = 1.5</code>. However, we encourage you to use integers than
+float numbers.</p>
 <h2 id="showhide-sidebars-toggle">Show/hide sidebars toggle</h2>
 <p>This feature is only available in document pages. 2 toggle buttons are on the
 top-right corner of the page. You can switch them off to hide left/right sidebars
