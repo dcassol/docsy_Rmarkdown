@@ -9,14 +9,14 @@ type: docs
 
 This Docsy Template Project uses the [Docsy](https://github.com/google/docsy) theme, and we have provided a skeleton documentation structure for you to use when you clone the repo. The full documentation can be found [here](https://www.docsy.dev/docs/deployment/).
 
-### Workf with R markdown
+### Work with R markdown
 
 One example Rmarkdown file, **_/content/en/rmarkdown/examples/example.Rmarkdown_** is also included in the skeleton. 
 
 1. To modify website content, after running `blogdown::serve_site()`, change files in `/content/en` directory. 
 
 2. Change **_/content/en/_index.html_** for the homepage. 
-
+    - Read about the [homepage background image](/rmarkdown/commonproblems/#5-home-page-background-image).
 3. Add your `markdown` or `Rmarkdown` files inside the `/content/en` folder. 
 
 4. > **_Important:_** To work with the `RMarkdown` files, change file extension from `.Rmd` to `.Rmarkdown` extension, e.g. `tutorial.Rmakdown`.
@@ -65,6 +65,20 @@ weight: 5
 * [Navigation and Search](https://www.docsy.dev/docs/adding-content/navigation/#top-level-menu)
 
 * [Adding a version drop-down](https://www.docsy.dev/docs/adding-content/versioning/)
+
+
+## Change website tab logo
+You could change the website logo following the [docsy documents](https://www.docsy.dev/docs/adding-content/iconsimages/).
+Here we are talking about the logo appears on the browser tab, not the one on the top left corner. 
+
+1. Prepare a not too large png image (ideally only a square image, transparent background). 
+The size does not need to be too big 500x500 pixel will be good enough, but do not 
+be very small, at least 200x200.
+2. Go to website like <https://www.favicon-generator.org/>, <https://realfavicongenerator.net/>
+or others to generate you favicons. Then download the bundle. 
+3. Remove files inside `/static/favicons`, do not remove the folder.
+4. Unzip all content into the `/static/favicons`. You should see many images files, 
+like android, apple, etc. Then you should see the tab icon updated. 
 
 
 ## Build the website
