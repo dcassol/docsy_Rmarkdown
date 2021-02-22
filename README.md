@@ -22,3 +22,4 @@ Visit our website for demo and instructions <https://www.dcassol.com/docsy_Rmark
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2de20eae-a002-40ef-8c96-1fe54f9528d4/deploy-status)](https://app.netlify.com/sites/docsy-rmarkdown/deploys)
 
 
+ 
