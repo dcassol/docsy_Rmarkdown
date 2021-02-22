@@ -1172,7 +1172,7 @@ visibleDate: &amp;quot;2121-02-01&amp;quot;
         
         &lt;h2 id=&#34;create-your-website-content&#34;&gt;Create your website content&lt;/h2&gt;
 &lt;p&gt;This Docsy Template Project uses the &lt;a href=&#34;https://github.com/google/docsy&#34;&gt;Docsy&lt;/a&gt; theme, and we have provided a skeleton documentation structure for you to use when you clone the repo. The full documentation can be found &lt;a href=&#34;https://www.docsy.dev/docs/deployment/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;workf-with-r-markdown&#34;&gt;Workf with R markdown&lt;/h3&gt;
+&lt;h3 id=&#34;work-with-r-markdown&#34;&gt;Work with R markdown&lt;/h3&gt;
 &lt;p&gt;One example Rmarkdown file, &lt;strong&gt;&lt;em&gt;/content/en/rmarkdown/examples/example.Rmarkdown&lt;/em&gt;&lt;/strong&gt; is also included in the skeleton.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -1180,6 +1180,9 @@ visibleDate: &amp;quot;2121-02-01&amp;quot;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Change &lt;strong&gt;_/content/en/&lt;em&gt;index.html&lt;/em&gt;&lt;/strong&gt; for the homepage.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Read about the &lt;a href=&#34;../rmarkdown/commonproblems/#5-home-page-background-image&#34;&gt;homepage background image&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Add your &lt;code&gt;markdown&lt;/code&gt; or &lt;code&gt;Rmarkdown&lt;/code&gt; files inside the &lt;code&gt;/content/en&lt;/code&gt; folder.&lt;/p&gt;
@@ -1239,6 +1242,19 @@ weight: 5
 &lt;p&gt;&lt;a href=&#34;https://www.docsy.dev/docs/adding-content/versioning/&#34;&gt;Adding a version drop-down&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;change-website-tab-logo&#34;&gt;Change website tab logo&lt;/h2&gt;
+&lt;p&gt;You could change the website logo following the &lt;a href=&#34;https://www.docsy.dev/docs/adding-content/iconsimages/&#34;&gt;docsy documents&lt;/a&gt;.
+Here we are talking about the logo appears on the browser tab, not the one on the top left corner.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Prepare a not too large png image (ideally only a square image, transparent background).
+The size does not need to be too big 500x500 pixel will be good enough, but do not
+be very small, at least 200x200.&lt;/li&gt;
+&lt;li&gt;Go to website like &lt;a href=&#34;https://www.favicon-generator.org/&#34;&gt;https://www.favicon-generator.org/&lt;/a&gt;, &lt;a href=&#34;https://realfavicongenerator.net/&#34;&gt;https://realfavicongenerator.net/&lt;/a&gt;
+or others to generate you favicons. Then download the bundle.&lt;/li&gt;
+&lt;li&gt;Remove files inside &lt;code&gt;/static/favicons&lt;/code&gt;, do not remove the folder.&lt;/li&gt;
+&lt;li&gt;Unzip all content into the &lt;code&gt;/static/favicons&lt;/code&gt;. You should see many images files,
+like android, apple, etc. Then you should see the tab icon updated.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h2 id=&#34;build-the-website&#34;&gt;Build the website&lt;/h2&gt;
 &lt;p&gt;If you are ready to publish the website, use&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;blogdown::build_site(build_rmd = &amp;quot;md5sum&amp;quot;)
