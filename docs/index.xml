@@ -3045,6 +3045,17 @@ For site with sensitive content like exam solutions, &amp;ldquo;hard&amp;rdquo; 
 visible sections titles. This is a good indicator to show where the users are.&lt;/p&gt;
 &lt;p&gt;If the TOC is too long, when readers scroll the page, TOC bar will automatically scroll
 as well.&lt;/p&gt;
+&lt;h2 id=&#34;links-with-target_blank&#34;&gt;Links with &lt;code&gt;target=&amp;quot;_blank&amp;quot;&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;If you want users to open a new tab when click a Rmarkdown link, add &lt;code&gt;{t_blank}&lt;/code&gt;
+in the end of the link text.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;normal link:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-md&#34;&gt;[a link to google](https://www.google.com)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.google.com&#34;&gt;a link to google&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;link with &lt;code&gt;target=&amp;quot;_blank&amp;quot;&lt;/code&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-md&#34;&gt;[a link to google{t_blank}](https://www.google.com)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.google.com&#34;&gt;a link to google{t_blank}&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>

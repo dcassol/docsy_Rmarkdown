@@ -109,3 +109,13 @@ function hideContent(visDate){
   }
 
 }
+
+// add target blank
+$(()=>{
+  $('.td-content a:contains("{t_blank}")').each(function(){
+    $(this)
+      .text($(this).text().replace("{t_blank}", ""))
+      .attr("target", "_blank");
+  });
+});
+

@@ -35,7 +35,7 @@ In R markdown:
 1 &#43; 1  ## [1] 2  In markdown:
 ```r 1 &#43; 1 ```  which is the same, but code will not be evaluated in simple markdowns">
 <meta itemprop="dateModified" content="2021-02-17T12:58:29-08:00" />
-<meta itemprop="wordCount" content="790">
+<meta itemprop="wordCount" content="837">
 
 
 
@@ -275,7 +275,7 @@ if (!doNotTrack) {
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="../../offline-search-index.be00955ffaa0fbacf0fdf1bd390ea7d3.json"
+  data-offline-search-index-json-src="../../offline-search-index.f011723623f08f9e8bea1ff3d96f82cc.json"
   data-offline-search-base-href="../../"
   data-offline-search-max-results="10"
 >
@@ -307,7 +307,7 @@ if (!doNotTrack) {
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="../../offline-search-index.be00955ffaa0fbacf0fdf1bd390ea7d3.json"
+  data-offline-search-index-json-src="../../offline-search-index.f011723623f08f9e8bea1ff3d96f82cc.json"
   data-offline-search-base-href="../../"
   data-offline-search-max-results="10"
 >
@@ -511,6 +511,7 @@ if (!doNotTrack) {
     <li><a href="#automatic-deployment-to-github-pages-or-netlify">Automatic deployment to Github pages or Netlify</a></li>
     <li><a href="#hide-document-before-the-specified-date">Hide document before the specified date</a></li>
     <li><a href="#table-of-content-highlighting-and-scrolling">Table of content highlighting and scrolling</a></li>
+    <li><a href="#links-with-target_blank">Links with <code>target=&quot;_blank&quot;</code></a></li>
   </ul>
 </nav>
 
@@ -699,6 +700,17 @@ For site with sensitive content like exam solutions, &ldquo;hard&rdquo; may be b
 visible sections titles. This is a good indicator to show where the users are.</p>
 <p>If the TOC is too long, when readers scroll the page, TOC bar will automatically scroll
 as well.</p>
+<h2 id="links-with-target_blank">Links with <code>target=&quot;_blank&quot;</code></h2>
+<p>If you want users to open a new tab when click a Rmarkdown link, add <code>{t_blank}</code>
+in the end of the link text.</p>
+<p><strong>normal link:</strong></p>
+<pre><code class="language-md">[a link to google](https://www.google.com)
+</code></pre>
+<p><a href="https://www.google.com">a link to google</a></p>
+<p><strong>link with <code>target=&quot;_blank&quot;</code>:</strong></p>
+<pre><code class="language-md">[a link to google{t_blank}](https://www.google.com)
+</code></pre>
+<p><a href="https://www.google.com">a link to google{t_blank}</a></p>
 
 	
 		<style>
