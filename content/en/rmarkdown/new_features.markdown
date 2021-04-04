@@ -186,3 +186,23 @@ If the TOC is too long, when readers scroll the page, TOC bar will automatically
 as well. 
 
 
+## Links with `target="_blank"`
+
+If you want users to open a new tab when click a Rmarkdown link, add `{t_blank}`
+in the end of the link text. 
+
+**normal link:**
+
+```md
+[a link to google](https://www.google.com)
+```
+[a link to google](https://www.google.com)
+
+**link with `target="_blank"`:**
+
+```md
+[a link to google{t_blank}](https://www.google.com)
+```
+[a link to google{t_blank}](https://www.google.com)
+
+
