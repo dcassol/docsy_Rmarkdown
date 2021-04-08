@@ -15,17 +15,19 @@
       {{ $gh_repo_path = printf "%s/%s/content/%s" $gh_branch $gh_subdir $pathFormatted }}
     {{ end }}
     {{ $editURL := printf "%s/edit/%s" $gh_repo $gh_repo_path }}
-    {{ $sourceURL := printf "%s/%s" (replace $gh_repo "github.com" "raw.githubusercontent.com") ( replace $gh_repo_path ".markdown" ".Rmarkdown") }}
+    {{ $sourceURL := printf "%s/%s" (replace $gh_repo "github.com" "raw.githubusercontent.com") $gh_repo_path }}
     {{ $createURL := printf "%s/edit/%s" $gh_repo $gh_repo_path }}
     {{ $issuesURL := printf "%s/issues/new?title=%s" $gh_repo (htmlEscape $.Title )}}
     {{ $newPageStub := resources.Get "stubs/new-page-template.md" }}
     {{ $newPageQS := querify "value" $newPageStub.Content "filename" "change-me.md" | safeURL }}
     {{ $newPageURL := printf "%s/new/%s?%s"  $gh_repo $gh_repo_path $newPageQS }}
 
-    <a href="{{ $sourceURL }}" target="_blank"><i class="fa fa-code fa-fw"></i> {{ "View source code" }}</a>
-    {{$rmdPath := printf "/%s" (replace .Path ".markdown" ".Rmd") }}
-    {{ if (fileExists (printf "static/%s" $rmdPath)) }}
-    <a href="{{ $rmdPath }}" target="_blank"  download><i class="fa fa-code fa-fw"></i> {{ "Download Rmd" }}</a>
+
+    {{$rmdPath := replace .Path ".md" ".Rmd" }}
+    {{ if (fileExists (printf "/content/en/%s" $rmdPath)) }}
+      <a href="{{ replace $sourceURL ".md" ".Rmd" }}" target="_blank" class="source-link"><i class="fa fa-code fa-fw"></i> {{ "View Rmd source" }}</a>
+    {{ else }}
+      <a href="{{ $sourceURL }}" target="_blank" class="source-link"><i class="fa fa-code fa-fw"></i> {{ "View source code" }}</a>
     {{ end }}
 
     <a href="{{ $editURL }}" target="_blank"><i class="fa fa-edit fa-fw"></i> {{ T "post_edit_this" }}</a>

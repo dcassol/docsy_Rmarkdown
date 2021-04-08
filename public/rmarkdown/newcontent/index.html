@@ -19,7 +19,7 @@
 
 <title>Add new content | Goldydocs</title><meta property="og:title" content="Add new content" />
 <meta property="og:description" content="Create your website content This Docsy Template Project uses the Docsy theme, and we have provided a skeleton documentation structure for you to use when you clone the repo. The full documentation can be found here.
-Work with R markdown One example Rmarkdown file, /content/en/rmarkdown/examples/example.Rmarkdown is also included in the skeleton.
+Work with R markdown One example Rmarkdown file, /content/en/rmarkdown/examples/example_rmd.Rmd is also included in the skeleton.
   To modify website content, after running blogdown::serve_site(), change files in /content/en directory.
   Change _/content/en/index.html for the homepage." />
 <meta property="og:type" content="article" />
@@ -27,11 +27,11 @@ Work with R markdown One example Rmarkdown file, /content/en/rmarkdown/examples/
 <meta property="article:modified_time" content="2021-04-07T18:06:47-07:00" /><meta property="og:site_name" content="Goldydocs" />
 <meta itemprop="name" content="Add new content">
 <meta itemprop="description" content="Create your website content This Docsy Template Project uses the Docsy theme, and we have provided a skeleton documentation structure for you to use when you clone the repo. The full documentation can be found here.
-Work with R markdown One example Rmarkdown file, /content/en/rmarkdown/examples/example.Rmarkdown is also included in the skeleton.
+Work with R markdown One example Rmarkdown file, /content/en/rmarkdown/examples/example_rmd.Rmd is also included in the skeleton.
   To modify website content, after running blogdown::serve_site(), change files in /content/en directory.
   Change _/content/en/index.html for the homepage.">
 <meta itemprop="dateModified" content="2021-04-07T18:06:47-07:00" />
-<meta itemprop="wordCount" content="595">
+<meta itemprop="wordCount" content="631">
 
 
 
@@ -39,7 +39,7 @@ Work with R markdown One example Rmarkdown file, /content/en/rmarkdown/examples/
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Add new content"/>
 <meta name="twitter:description" content="Create your website content This Docsy Template Project uses the Docsy theme, and we have provided a skeleton documentation structure for you to use when you clone the repo. The full documentation can be found here.
-Work with R markdown One example Rmarkdown file, /content/en/rmarkdown/examples/example.Rmarkdown is also included in the skeleton.
+Work with R markdown One example Rmarkdown file, /content/en/rmarkdown/examples/example_rmd.Rmd is also included in the skeleton.
   To modify website content, after running blogdown::serve_site(), change files in /content/en directory.
   Change _/content/en/index.html for the homepage."/>
 
@@ -269,7 +269,7 @@ if (!doNotTrack) {
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="../../offline-search-index.4ff25e01687f412954b30180adaae3a1.json"
+  data-offline-search-index-json-src="../../offline-search-index.292706b4bc8eba1b39de6e1625878cce.json"
   data-offline-search-base-href="../../"
   data-offline-search-max-results="10"
 >
@@ -301,7 +301,7 @@ if (!doNotTrack) {
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="../../offline-search-index.4ff25e01687f412954b30180adaae3a1.json"
+  data-offline-search-index-json-src="../../offline-search-index.292706b4bc8eba1b39de6e1625878cce.json"
   data-offline-search-base-href="../../"
   data-offline-search-max-results="10"
 >
@@ -476,8 +476,10 @@ if (!doNotTrack) {
     
     
 
-    <a href="https://raw.githubusercontent.com/dcassol/docsy_Rmarkdown/main/content/en/rmarkdown/newcontent.md" target="_blank"><i class="fa fa-code fa-fw"></i> View source code</a>
+
     
+    
+      <a href="https://raw.githubusercontent.com/dcassol/docsy_Rmarkdown/main/content/en/rmarkdown/newcontent.md" target="_blank" class="source-link"><i class="fa fa-code fa-fw"></i> View source code</a>
     
 
     <a href="https://github.com/dcassol/docsy_Rmarkdown/edit/main/content/en/rmarkdown/newcontent.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
@@ -501,7 +503,7 @@ if (!doNotTrack) {
     <li><a href="#create-your-website-content">Create your website content</a>
       <ul>
         <li><a href="#work-with-r-markdown">Work with R markdown</a></li>
-        <li><a href="#markdown-vs-md">.markdown <em>vs</em> .md</a></li>
+        <li><a href="#view-rmd-source">View <code>.Rmd</code> source</a></li>
       </ul>
     </li>
     <li><a href="#pages-types">Pages Types</a>
@@ -555,7 +557,7 @@ if (!doNotTrack) {
 	<h2 id="create-your-website-content">Create your website content</h2>
 <p>This Docsy Template Project uses the <a href="https://github.com/google/docsy">Docsy</a> theme, and we have provided a skeleton documentation structure for you to use when you clone the repo. The full documentation can be found <a href="https://www.docsy.dev/docs/deployment/">here</a>.</p>
 <h3 id="work-with-r-markdown">Work with R markdown</h3>
-<p>One example Rmarkdown file, <strong><em>/content/en/rmarkdown/examples/example.Rmarkdown</em></strong> is also included in the skeleton.</p>
+<p>One example Rmarkdown file, <strong><em>/content/en/rmarkdown/examples/example_rmd.Rmd</em></strong> is also included in the skeleton.</p>
 <ol>
 <li>
 <p>To modify website content, after running <code>blogdown::serve_site()</code>, change files in <code>/content/en</code> directory.</p>
@@ -567,13 +569,7 @@ if (!doNotTrack) {
 </ul>
 </li>
 <li>
-<p>Add your <code>markdown</code> or <code>Rmarkdown</code> files inside the <code>/content/en</code> folder.</p>
-</li>
-<li>
-<blockquote>
-<p><strong><em>Important:</em></strong> To work with the <code>RMarkdown</code> files, change file extension from <code>.Rmd</code> to <code>.Rmarkdown</code> extension, e.g. <code>tutorial.Rmakdown</code>.
-The <code>.Rmd</code> files may still work but one of the issues includes lack of R code highlighting.</p>
-</blockquote>
+<p>Add your <code>md</code> or <code>Rmd</code> files inside the <code>/content/en</code> folder.</p>
 </li>
 <li>
 <p>When you are writing the Rmarkdown files, a good practice is to only use one
@@ -585,21 +581,26 @@ in main text but will <strong>not show up on the TOC</strong>. If you wish to st
 </li>
 <li>
 <p>When you save your modified Rmarkdown files, {<code>blogdown</code>} will automatically
-render the file to <code>.markdown</code> extension. This new <code>.markdown</code> will be used by
-Hugo to generate HTML. Usually you do not manually edit <code>.markdown</code> files.</p>
+render the file from <code>filename.Rmd</code> to <code>filename.md</code> extension. This new <code>.md</code> will be used by
+Hugo to generate HTML. Usually you do not manually edit this <code>.md</code> file.</p>
 </li>
 <li>
-<p>After the <code>.markdown</code> generation, changes will be reflected in the local browser in a second.</p>
+<p>After the <code>.md</code> generation, changes will be reflected in the local browser in a second.</p>
 </li>
 <li>
 <p>Before building the website, check out docs for <a href="../../rmarkdown/new_features/">new features</a>.</p>
 </li>
 </ol>
-<h3 id="markdown-vs-md">.markdown <em>vs</em> .md</h3>
-<p>In this theme <code>.markdown</code> files are treated as intermediate files for <code>.Rmarkdown</code>
-files, so the <code>View source code</code> button will redirect any <code>.markdown</code> to <code>.Rmarkdown</code>.</p>
-<p>If you are writing a pure markdown file and want the source code button to link to
-the markdown file, make sure you use <code>.md</code> extension, not <code>.markdown</code>.</p>
+<h3 id="view-rmd-source">View <code>.Rmd</code> source</h3>
+<p>By default, the <code>View source code</code> button will be display both on the right toc panel
+and the main content panel. Usually this button will create links point to the
+raw source code <code>.md</code> file stored on Github. However, if you are writing a <code>.Rmd</code>
+file, this theme will detect if you have a file that has the same name as the
+<code>.md</code> file but with <code>.Rmd</code> extension stored under the same folder. If so, the
+<code>View source code</code> button becomes <code>View Rmd source</code> and it will create a link
+point to the <code>.Rmd</code> file on Github instead of the <code>.md</code> file.</p>
+<p>See the difference of the button under the main title on
+<a href="../examples/example_rmd">Basic R Markdown</a> page and this page.</p>
 <h2 id="pages-types">Pages Types</h2>
 <p>Because most technical documentation sites have different sections for different types of content, the Docsy theme comes with the following templates for top-level site sections that you might need:</p>
 <ul>

@@ -11,38 +11,42 @@ This Docsy Template Project uses the [Docsy](https://github.com/google/docsy) th
 
 ### Work with R markdown
 
-One example Rmarkdown file, **_/content/en/rmarkdown/examples/example.Rmarkdown_** is also included in the skeleton. 
+One example Rmarkdown file, **_/content/en/rmarkdown/examples/example_rmd.Rmd_** is also included in the skeleton. 
 
 1. To modify website content, after running `blogdown::serve_site()`, change files in `/content/en` directory. 
 
 2. Change **_/content/en/_index.html_** for the homepage. 
     - Read about the [homepage background image](/rmarkdown/commonproblems/#5-home-page-background-image).
-3. Add your `markdown` or `Rmarkdown` files inside the `/content/en` folder. 
+3. Add your `md` or `Rmd` files inside the `/content/en` folder. 
 
-4. > **_Important:_** To work with the `RMarkdown` files, change file extension from `.Rmd` to `.Rmarkdown` extension, e.g. `tutorial.Rmakdown`.
-The `.Rmd` files may still work but one of the issues includes lack of R code highlighting. 
-
-5. When you are writing the Rmarkdown files, a good practice is to only use one 
+4. When you are writing the Rmarkdown files, a good practice is to only use one 
 level 1 heading ("#"). This theme has already created a H1 for you which is the 
 main title, so try to aviod the H1 heading in other part of the document. By
 default, this template assumes you are not using other H1 headings and the table 
 of content (TOC) starts with H2, and other additional H1 heading will be displayed
 in main text but will **not show up on the TOC**. If you wish to start with H1 on your TOC, change `[markup.tableOfContents]` in `/config.toml`.
 
-6. When you save your modified Rmarkdown files, {`blogdown`} will automatically 
-render the file to `.markdown` extension. This new `.markdown` will be used by 
-Hugo to generate HTML. Usually you do not manually edit `.markdown` files.
 
-7. After the `.markdown` generation, changes will be reflected in the local browser in a second. 
+6. When you save your modified Rmarkdown files, {`blogdown`} will automatically 
+render the file from `filename.Rmd` to `filename.md` extension. This new `.md` will be used by 
+Hugo to generate HTML. Usually you do not manually edit this `.md` file.
+
+7. After the `.md` generation, changes will be reflected in the local browser in a second. 
 
 8. Before building the website, check out docs for [new features](/rmarkdown/new_features/). 
 
-### .markdown *vs* .md
-In this theme `.markdown` files are treated as intermediate files for `.Rmarkdown` 
-files, so the `View source code` button will redirect any `.markdown` to `.Rmarkdown`.
+### View `.Rmd` source
+By default, the `View source code` button will be display both on the right toc panel
+and the main content panel. Usually this button will create links point to the 
+raw source code `.md` file stored on Github. However, if you are writing a `.Rmd`
+file, this theme will detect if you have a file that has the same name as the 
+`.md` file but with `.Rmd` extension stored under the same folder. If so, the 
+`View source code` button becomes `View Rmd source` and it will create a link 
+point to the `.Rmd` file on Github instead of the `.md` file. 
 
-If you are writing a pure markdown file and want the source code button to link to 
-the markdown file, make sure you use `.md` extension, not `.markdown`. 
+See the difference of the button under the main title on 
+[Basic R Markdown](../examples/example_rmd) page and this page.
+
 
 ## Pages Types
 
@@ -64,6 +68,7 @@ type: docs
 weight: 5
 ---
 ```
+
 
 ### Other Content
 
