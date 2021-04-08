@@ -40,15 +40,10 @@ $(function(){
 // insert pagesource button
 $(function(){
   if ($('.td-page-meta').get(0)) {
-    var sourceLink = $('.td-page-meta a:contains("View source code")');
+    var sourceLink = $('.td-page-meta a.source-link');
     if ($(".reading-time").get(0)) $(".reading-time").after(sourceLink.clone());
     else $(".td-content h1:first-of-type").after(sourceLink.clone());
-    var rmdLink = $('.td-page-meta a:contains("Download Rmd")');
-    if (rmdLink.length) {
-      if ($(".reading-time").get(0)) $(".reading-time").after(rmdLink.clone().css('padding-right', '5px'));
-      else $(".td-content h1:first-of-type").after(rmdLink.clone().css('padding-right', '5px'));
     }
-  }
 });
 
 // highlight toc
