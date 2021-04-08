@@ -21,7 +21,13 @@
     {{ $newPageStub := resources.Get "stubs/new-page-template.md" }}
     {{ $newPageQS := querify "value" $newPageStub.Content "filename" "change-me.md" | safeURL }}
     {{ $newPageURL := printf "%s/new/%s?%s"  $gh_repo $gh_repo_path $newPageQS }}
+
     <a href="{{ $sourceURL }}" target="_blank"><i class="fa fa-code fa-fw"></i> {{ "View source code" }}</a>
+    {{$rmdPath := printf "/%s" (replace .Path ".markdown" ".Rmd") }}
+    {{ if (fileExists (printf "static/%s" $rmdPath)) }}
+    <a href="{{ $rmdPath }}" target="_blank"  download><i class="fa fa-code fa-fw"></i> {{ "Download Rmd" }}</a>
+    {{ end }}
+
     <a href="{{ $editURL }}" target="_blank"><i class="fa fa-edit fa-fw"></i> {{ T "post_edit_this" }}</a>
     <a href="{{ $newPageURL }}" target="_blank"><i class="fa fa-edit fa-fw"></i> {{ T "post_create_child_page" }}</a>
     <a href="{{ $issuesURL }}" target="_blank"><i class="fab fa-github fa-fw"></i> {{ T "post_create_issue" }}</a>
