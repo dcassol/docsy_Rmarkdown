@@ -37,6 +37,13 @@ Hugo to generate HTML. Usually you do not manually edit `.markdown` files.
 
 8. Before building the website, check out docs for [new features](/rmarkdown/new_features/). 
 
+### .markdown *vs* .md
+In this theme `.markdown` files are treated as intermediate files for `.Rmarkdown` 
+files, so the `View source code` button will redirect any `.markdown` to `.Rmarkdown`.
+
+If you are writing a pure markdown file and want the source code button to link to 
+the markdown file, make sure you use `.md` extension, not `.markdown`. 
+
 ## Pages Types
 
 Because most technical documentation sites have different sections for different types of content, the Docsy theme comes with the following templates for top-level site sections that you might need:

@@ -1213,6 +1213,11 @@ Hugo to generate HTML. Usually you do not manually edit &lt;code&gt;.markdown&lt
 &lt;p&gt;Before building the website, check out docs for &lt;a href=&#34;../rmarkdown/new_features/&#34;&gt;new features&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;h3 id=&#34;markdown-vs-md&#34;&gt;.markdown &lt;em&gt;vs&lt;/em&gt; .md&lt;/h3&gt;
+&lt;p&gt;In this theme &lt;code&gt;.markdown&lt;/code&gt; files are treated as intermediate files for &lt;code&gt;.Rmarkdown&lt;/code&gt;
+files, so the &lt;code&gt;View source code&lt;/code&gt; button will redirect any &lt;code&gt;.markdown&lt;/code&gt; to &lt;code&gt;.Rmarkdown&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If you are writing a pure markdown file and want the source code button to link to
+the markdown file, make sure you use &lt;code&gt;.md&lt;/code&gt; extension, not &lt;code&gt;.markdown&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;pages-types&#34;&gt;Pages Types&lt;/h2&gt;
 &lt;p&gt;Because most technical documentation sites have different sections for different types of content, the Docsy theme comes with the following templates for top-level site sections that you might need:&lt;/p&gt;
 &lt;ul&gt;

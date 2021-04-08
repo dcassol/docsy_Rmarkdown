@@ -15,7 +15,7 @@
       {{ $gh_repo_path = printf "%s/%s/content/%s" $gh_branch $gh_subdir $pathFormatted }}
     {{ end }}
     {{ $editURL := printf "%s/edit/%s" $gh_repo $gh_repo_path }}
-    {{ $sourceURL := printf "%s/blob/%s" $gh_repo $gh_repo_path }}
+    {{ $sourceURL := printf "%s/%s" (replace $gh_repo "github.com" "raw.githubusercontent.com") ( replace $gh_repo_path ".markdown" ".Rmarkdown") }}
     {{ $createURL := printf "%s/edit/%s" $gh_repo $gh_repo_path }}
     {{ $issuesURL := printf "%s/issues/new?title=%s" $gh_repo (htmlEscape $.Title )}}
     {{ $newPageStub := resources.Get "stubs/new-page-template.md" }}
