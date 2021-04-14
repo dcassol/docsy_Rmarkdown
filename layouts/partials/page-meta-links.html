@@ -30,7 +30,7 @@
     {{ else }}
       <a href="{{ $sourceURL }}" target="_blank" class="source-link"><i class="fa fa-code fa-fw"></i> {{ "View source code" }}</a>
     {{ end }}
-    <a href="{{ $sourceURL }}" target="_blank"><i class="fab fa-github fa-fw"></i> {{ "View on Github" }}</a>
+    <a href="{{ $githubURL }}" target="_blank"><i class="fab fa-github fa-fw"></i> {{ "View on Github" }}</a>
     <a href="{{ $editURL }}" target="_blank"><i class="fa fa-edit fa-fw"></i> {{ T "post_edit_this" }}</a>
     <a href="{{ $newPageURL }}" target="_blank"><i class="fa fa-edit fa-fw"></i> {{ T "post_create_child_page" }}</a>
     {{ if $gh_project_repo }}
