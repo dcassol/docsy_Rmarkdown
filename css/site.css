@@ -79,3 +79,8 @@ div#driver-highlighted-element-stage, div#driver-page-overlay {
     font-size: 0.9rem;;
 }
 
+/*when nav dropdown is too long, scoll it */
+.td-navbar-nav-scroll .nav-item .dropdown-menu {
+    max-height: 90vh;
+    overflow: hidden scroll;
+}
