@@ -96,3 +96,15 @@ You should see a website is opened in your local browser or Rstudio viewer.
 cd YOUR_NEW_REPO_PATH
 hugo serve -b "http://localhost" 
 ```
+
+### Update theme - submodule
+
+To keep the webpage update, you should update the submodule theme:
+
+```bash
+git submodule update --remote
+git add .
+git commit -m "update submodule"
+git push
+```
+

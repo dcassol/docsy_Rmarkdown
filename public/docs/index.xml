@@ -791,6 +791,13 @@ change working directory to the repository and run:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd YOUR_NEW_REPO_PATH
 hugo serve -b &amp;quot;http://localhost&amp;quot; 
 &lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;update-theme---submodule&#34;&gt;Update theme - submodule&lt;/h3&gt;
+&lt;p&gt;To keep the webpage update, you should update the submodule theme:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git submodule update --remote
+git add .
+git commit -m &amp;quot;update submodule&amp;quot;
+git push
+&lt;/code&gt;&lt;/pre&gt;
 
       </description>
     </item>
