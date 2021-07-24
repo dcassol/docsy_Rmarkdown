@@ -1,3 +1,13 @@
+/* This pushes other inline elements above or below header */
+div.row h3{
+  width: 100%;
+}
+
+/* Force menu item to be inline to icon */
+.nav-link{
+  display: inline-block !important;
+}
+
 .sps-site-bg-big {
   height: 45vh;
 }
