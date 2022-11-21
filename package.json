@@ -20,8 +20,8 @@
     "postcss": "^8.4.12"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.4",
-    "postcss-cli": "^10.0.0"
+    "autoprefixer": "^10.4.13",
+    "postcss-cli": "^9.1.0"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.2"
